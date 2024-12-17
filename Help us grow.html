@@ -23,12 +23,75 @@
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-
   <!-- Customized Bootstrap Stylesheet -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Template Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
+  <style>
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .navbar {
+      transition: all 0.3s ease;
+    }
+
+    .navbar:hover {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .footer {
+      background-color: #222;
+      color: white;
+    }
+
+    .footer .footer-item h4,
+    .footer .footer-item a {
+      color: #fff;
+    }
+
+    .footer .footer-item a:hover {
+      text-decoration: underline;
+    }
+
+    .sub-title {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .container-fluid {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    /* Media queries for responsiveness */
+    @media (max-width: 767px) {
+      .navbar-brand img {
+        width: 150px;
+      }
+
+      .footer-item {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .donation-card {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .navbar-brand img {
+        width: 200px;
+      }
+
+      .footer-item {
+        text-align: left;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -41,7 +104,6 @@
     </div>
   </div>
   <!-- Spinner End -->
-
 
   <!-- Topbar Start -->
   <div class="container-fluid bg-primary px-5 d-none d-lg-block">
@@ -77,7 +139,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
       <!-- Logo -->
       <a href="/" class="navbar-brand p-0">
-        <img src="./img/myUnityLogo.png" class="img-fluid" alt="Logo" style="width: 200px; height: auto;" />
+        <img src="./img/myUnityLogo.png" class="img-fluid" alt="Logo" />
       </a>
       <!-- Navbar Toggler -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -121,7 +183,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="./about.html" class="nav-link">Unity Home</a>
+            <a href="./UnityHome.html" class="nav-link">Unity Home</a>
           </li>
           <li class="nav-item">
             <a href="./about.html" class="nav-link">Unity Academy</a>
@@ -169,142 +231,114 @@
   <!-- Header Start -->
   <div class="container-fluid motherPageBG">
     <div class="container text-center py-5" style="max-width: 900px;">
-      <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">Mother's Home</h1>
+      <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">Be a Part of the Change</h1>
         <ol class="breadcrumb justify-content-center text-white mb-0 wow fadeInDown" data-wow-delay="0.3s">
           <li class="breadcrumb-item"><a href="index.html" class="text-white">home</a></li>
-          <!-- <li class="breadcrumb-item"><a href="." class="text-white">Institution</a></li> -->
-          <li class="breadcrumb-item active text-secondary">Mother's Home</li>
+          <li class="breadcrumb-item active text-secondary">Help us grow</li>
         </ol>
     </div>
   </div>
   <!-- Header End -->
 
+  <!-- About Section -->
+  <div class="container py-5 bg-light rounded">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <img src="img\home\bg-01.png" class="img-fluid rounded" alt="Mother's Home">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="section-title">About Us</h2>
+        <p>Touhid Education Society (TES) proudly stands as a pillar of compassion and empowerment, transforming lives
+          through education, shelter, and care.</p>
+        <p>Our Mother’s Home and Qudsia Banu Unity Women’s Home are fully funded through charity and generous donations
+          to help uplift children and women in need.</p>
+      </div>
+    </div>
+  </div>
 
+  <!-- Mother’s Home Section -->
+  <div class="container py-5">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 order-lg-2">
+        <img src="img\home\MothersHome-bg.png" class="img-fluid rounded" alt="Mother's Home">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="section-title">Mother’s Home</h2>
+        <p>In 1977, our late founder, Mr. Rahimkhan Omerkhan, sheltered orphaned children in his own home and was their
+          primary caregiver. Due to the growing need, what started as a simple initiative blossomed into a full-fledged,
+          government-recognized orphanage that is now a lifeline for 37 young girls.</p>
+      </div>
+    </div>
+  </div>
 
-  <!-- About Start -->
-  <div class="container-fluid py-5">
-    <div class="container py-5">
-      <div class="row g-5">
-        <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-          <div class="bg-light rounded">
-            <img src="img/home/2.png" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Mother's Home" />
-          </div>
+  <!-- Qudsia Banu Unity Women’s Home Section -->
+  <div class="container py-5 bg-light rounded">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <img src="img\home\women-hostel.png" class="img-fluid rounded" alt="Mother's Home">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="section-title">Qudsia Banu Unity Women’s Home</h2>
+        <p>Was established in 2019 to encourage young girls, located in very remote areas, to pursue quality education
+          in the city. Currently, 83 young girls are supported and provided for in our home.</p>
+        <p>Sponsorship from our generous donors helps us cover the basic needs of our girls in both homes such as food,
+          clothing, school fees, medical expenses, etc.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Donation Section -->
+  <div class="container py-5 bg-light rounded">
+    <h2 class="text-center section-title mb-5">How You Can Help</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="card text-center p-4">
+          <!-- Image Card Above Donation -->
+          <img src="img\home\about-2.jpg" alt="Zakat" class="img-fluid mb-3" style="width: 100%; height: auto;">
+          <h5>ZAKAT</h5>
+          <p>Zakat, one of the five pillars of Islam, is a form of obligatory charity. Your Zakat is an Amanah, and we
+            take that trust very seriously. At TES, funds received as ZAKAT are dispersed as per strict Islamic
+            guidelines.</p>
+          <a href="donate.html" class="btn btn-primary">Donate</a>
         </div>
-        <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-          <h5 class="sub-title pe-3">About</h5>
-          <h1 class="display-5 mb-4">Mother’s Home</h1>
-          <p class="mb-4">
-            In 1977, our late founder, Mr. Rahimkhan Omerkhan, sheltered orphaned children in his own home and was their
-            primary caregiver. Due to the growing need, what started as a simple initiative blossomed into a
-            full-fledged, government-recognized orphanage that is now a lifeline for 37 young girls.
-          </p>
-          <p class="mb-4">
-            Our mission is to empower girls by providing them with the necessary tools for personal growth, academic
-            achievement, and emotional well-being. With a dedicated team of caregivers and educators, we ensure that
-            these girls are given the opportunity to thrive and succeed in life.
-          </p>
-          
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card text-center p-4">
+          <!-- Image Card Above Donation -->
+          <img src="img\home\about-1.jpg" alt="Sadaqah" class="img-fluid mb-3" style="width: 100%; height: auto;">
+          <h5>SADAQAH</h5>
+          <p>Sadaqah is the term used to describe a voluntary act of charity that is wide-reaching, for example a form
+            of monetary charity or an act of kindness that can be performed in any amount, at any time of the year.</p>
+          <a href="donate.html" class="btn btn-primary">Donate</a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card text-center p-4">
+          <!-- Image Card Above Donation -->
+          <img src="img\home\bg-2.jpg" alt="Sponsor a Girl" class="img-fluid mb-3" style="width: 100%; height: auto;">
+          <h5>SPONSOR A GIRL</h5>
+          <p>Cost of sponsoring a girl child from Mother’s Home or Qudsia Banu Unity Women’s Home is INR 40,000/- (~USD
+            $ 470). This covers their annual school fees, food, clothing, medical needs and other requirements.</p>
+          <a href="donate.html" class="btn btn-primary">Donate</a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card text-center p-4">
+          <!-- Image Card Above Donation -->
+          <img src="img\home\bg-1.jpg" alt="General Donation" class="img-fluid mb-3"
+            style="width: 100%; height: auto;">
+          <h5>GENERAL DONATION</h5>
+          <p>Help change lives through your generous contributions. Any donations made to TES are
+            exempt u/s 80G subject to limits prescribed under the Income Tax Act 1961. (Unique Reg. Number
+            -AAATT9597PF202170)</p>
+          <a href="donate.html" class="btn btn-primary">Donate</a>
         </div>
       </div>
     </div>
   </div>
-  <!-- About End -->
-
-  <!-- New Section Start -->
-  <div class="container-fluid py-5 bg-light">
-    <div class="container py-5">
-      <div class="row g-5">
-        <div class="col-xl-7 wow fadeInLeft" data-wow-delay="0.1s">
-          <h5 class="sub-title pe-3 mb-3">Our Mission</h5>
-          <h2 class="mb-4">Empowering Girls for a Brighter Future</h2>
-          <p class="mb-4">
-            At Mother’s Home, our mission is to empower each girl with the skills and knowledge needed to lead a
-            fulfilling and independent life. We provide a holistic approach to development, focusing on academic
-            success, personal growth, and emotional well-being. We believe that through education, mentorship, and
-            emotional support, these young girls can overcome life’s challenges and achieve their dreams.
-          </p>
-          <p class="mb-4">
-            We offer specialized programs that include life skills training, vocational courses, and extracurricular
-            activities to help girls become self-reliant and confident individuals. Our goal is to not only provide for
-            their basic needs but also to foster a sense of self-worth and community belonging.
-          </p>
-        </div>
-        <div class="col-xl-5 wow fadeInRight" data-wow-delay="0.3s">
-          <div class="bg-light rounded">
-            <img src="img/home/3.png" class="img-fluid w-100" style="margin-bottom: -7px;"
-              alt="Mother's Home Mission" />
-          </div>
-        </div>
-      </div>
-      <div class="row g-5 pt-5">
-        <div class="col-12 wow fadeInRight" data-wow-delay="0.3s">
-          <h5 class="sub-title pe-3 mb-3">Empowering Through Education</h5>
-          <p class="mb-4">
-            All our 120 girls from both homes are enrolled at our Unity Group of Institutions, from Kindergarten to
-            Degree college tailored to their individual needs. We encourage them to not only excel academically but also
-            participate in extracurriculars like sports, debate, science fairs, etc.
-          </p>
-        </div>
-
-        <div class="col-12 wow fadeInRight" data-wow-delay="0.3s">
-          <h5 class="sub-title pe-3 mb-3">Deeniyat/ Islamic Education</h5>
-          <p class="mb-4">
-            We offer daily classes in Quranic studies, Hadith, and Islamic Principles led by three dedicated and
-            knowledgeable teachers. The curriculum focuses on fostering a strong moral foundation, understanding
-            religious duties, and instilling values of Compassion, Honesty, and Discipline.
-          </p>
-        </div>
-
-        <div class="col-12 wow fadeInRight" data-wow-delay="0.3s">
-          <h5 class="sub-title pe-3 mb-3">Skill Development - Sui Dhaga and More</h5>
-          <p class="mb-4">
-            Sui Dhaga and More is a Skill Development Program designed to empower our girls by teaching them
-            valuable Stitching and Craft Skills.
-            They are given hands-on training sessions in sewing, embroidery, and crafting. Our girls stitch their
-            school uniforms and recently in 2024 prepared and sold badges for Indian Independence Day to neighboring
-            cities. Emboldened by the success, our girls are now expanding their skills to new products such as
-            bags, aprons, and bookmarks.
-            This program fosters self-reliance and equips them with practical skills that can lead to future
-            opportunities in entrepreneurship or employment.
-          </p>
-        </div>
-
-        <div class="col-12 wow fadeInRight" data-wow-delay="0.3s">
-          <h5 class="sub-title pe-3 mb-3">Our Services & Support</h5>
-          <p class="mb-4">
-            Mother’s Home is not just a shelter but a home where each girl receives personalized care, emotional
-            support, and mentorship. Our services include health care, counseling, educational support, and career
-            guidance. We work closely with local educators and professionals to provide the best possible
-            opportunities for the girls in our care.
-          </p>
-          <p class="mb-4">
-            In addition to academic and emotional support, we provide vocational training programs that prepare girls
-            for future employment. From computer literacy to tailoring and crafting, we ensure that these young girls
-            have access to resources that will enable them to become self-sufficient.
-          </p>
-          <p class="mb-4">
-            At Mother’s Home, we believe in the power of community and solidarity. Together, we strive to make a
-            meaningful difference in the lives of these young girls, helping them build the foundation for a successful
-            and meaningful life.
-          </p>
-        </div>
-
-        <div class="col-12 wow fadeInRight" data-wow-delay="0.3s">
-          <h5 class="sub-title pe-3 mb-3">Management</h5>
-          <p class="mb-4">
-            Both our Homes are managed by an all-women committee under the umbrella of TES. The committee makes regular
-            visits for inspection and guidance, reinforcing our management’s commitment to providing our girls with a
-            safe, nurturing, and compliant environment.
-            Our story is unique, full of remarkable resilience and unyielding love, and we have been rewriting stories
-            and transforming lives, thanks to the generous support of kind-hearted individuals from India and abroad.
-            We welcome you to be part of this journey. To support us, please click the link below!
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- New Section End -->
-
 
 
   <!-- Footer Start -->
@@ -322,9 +356,9 @@
             <div class="d-flex align-items-center">
               <i class="fas fa-share fa-2x text-secondary me-2"></i>
               <a class="btn mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-              <a class="btn mx-1" href=""><i class="fab fa-twitter"></i></a>
               <a class="btn mx-1" href=""><i class="fab fa-instagram"></i></a>
-              <a class="btn mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+              <a class="btn mx-1" href=""><i class="fab fa-youtube"></i></a>
+
             </div>
           </div>
         </div>
@@ -336,7 +370,7 @@
               <p class="text-white mb-0">09.00 am to 07.00 pm</p>
             </div>
             <div class="mb-3">
-              <h6 class="text-muted mb-0">Satday:</h6>
+              <h6 class="text-muted mb-0">Saturday:</h6>
               <p class="text-white mb-0">10.00 am to 05.00 pm</p>
             </div>
             <div class="mb-3">
@@ -360,10 +394,6 @@
             <!--<p class="text-white mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit
               amet,
               consectetur adipiscing elit.</p>-->
-            <!-- <div class="position-relative mx-auto rounded-pill">
-                              <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                              <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
-                          </div> -->
           </div>
         </div>
       </div>
@@ -377,13 +407,9 @@
       <div class="row g-4 align-items-center">
         <div class="col-md-6 text-center text-md-start mb-md-0">
           <span class="text-white"><a href="#" class="border-bottom text-white"><i
-                class="fas fa-copyright text-light me-2"></i>Touhid Education Society</a>, All right
-            reserved.</span>
+                class="fas fa-copyright text-light me-2"></i>Touhid Education Society</a>, All rights reserved.</span>
         </div>
         <div class="col-md-6 text-center text-md-end text-white">
-          <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-          <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-          <!--/*** you can purchase the Credit Removal License from "https://aspironkhuze.com/credit-removal". ***/-->
           Designed By <a class="border-bottom text-white" href="https://aspironkhuze.com">Aspiron Khuze
             Technologies Pvt
             Ltd</a>
@@ -396,7 +422,6 @@
   <!-- Back to Top -->
   <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
 
-
   <!-- JavaScript Libraries -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -405,7 +430,6 @@
   <script src="lib/waypoints/waypoints.min.js"></script>
   <script src="lib/counterup/counterup.min.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
 
   <!-- Template Javascript -->
   <script src="js/main.js"></script>
