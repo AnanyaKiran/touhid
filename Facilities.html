@@ -138,13 +138,49 @@
           </li>
           <!-- CTA Button -->
           <li class="nav-item ms-lg-3">
-            <a href="/Help us grow.html" class="btn btn-primary border-0 shadow-sm rounded-pill py-2 px-4 text-white">
+            <a href="/Help us grow.html" class="btn btn-flashy">
               Help us grow!
             </a>
           </li>
+          <style>
+            .btn-flashy {
+              background: linear-gradient(45deg, #ff6a00, #ee0979);
+              color: black;
+              /* Ensures text is visible on default state */
+              font-weight: bold;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 50px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+              text-transform: uppercase;
+              animation: glowing 1.5s infinite alternate;
+              transition: transform 0.2s ease-in-out, background 0.3s ease, color 0.3s ease;
+            }
+
+            .btn-flashy:hover {
+              transform: scale(1.1);
+              background: linear-gradient(45deg, #ee0979, #ff6a00);
+              color: white;
+              /* Change text color to white for better contrast */
+            }
+
+            @keyframes glowing {
+              0% {
+                box-shadow: 0 0 5px #ff6a00, 0 0 10px #ee0979, 0 0 15px #ff6a00;
+              }
+
+              100% {
+                box-shadow: 0 0 20px #ff6a00, 0 0 30px #ee0979, 0 0 40px #ff6a00;
+              }
+            }
+          </style>
         </ul>
       </div>
     </nav>
+  </div>
+  </ul>
+  </div>
+  </nav>
   </div>
   <!-- Navbar & Hero End -->
 
