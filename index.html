@@ -14,6 +14,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap"
     rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
   <!-- Icon Font Stylesheet -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
@@ -46,8 +47,9 @@
       <div class="col-lg-5 text-center text-lg-start mb-lg-0">
         <div class="d-flex">
           <a href="mailto:tesoffice53@gmail.com" class="text-white me-4 "><i
-            class="fas fa-envelope text-secondary text-red me-2"></i>tesoffice53@gmail.com</a>
-          <a href="#" class="text-white me-0"><i class="fas fa-phone-alt text-red text-secondary me-2"></i>08382-225295</a>
+              class="fas fa-envelope text-secondary text-red me-2"></i>tesoffice53@gmail.com</a>
+          <a href="#" class="text-white me-0"><i
+              class="fas fa-phone-alt text-red text-secondary me-2"></i>08382-225295</a>
         </div>
       </div>
       <div class="col-lg-3 row-cols-1 text-center mb-2 mb-lg-0">
@@ -143,7 +145,58 @@
     </nav>
   </div>
   <!-- Navbar & Hero End -->
+  <div id="popup-card"
+    class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50 backdrop-blur-sm">
+    <div id="popup-content"
+      class="bg-gradient-to-r from-blue-50 via-blue-200 to-blue-50 rounded-lg shadow-md p-8 w-96 text-center relative scale-0 opacity-0 transform transition-all duration-500">
+      <h2 class="text-3xl font-bold text-blue-950 text-bold mb-4">Help Us Grow</h2>
+      <p class="text-blue-900 mb-4 italic">
+        <strong>“An investment in knowledge pays the best interest.” – Benjamin Franklin</strong>
+      </p>
+      <p class="text-blue-900 mb-6">
+        <strong>Your generous contribution helps us provide better educational opportunities to those in need. Together, we can
+        change lives.</strong>
+      </p>
+      <a href="/Help us grow.html"
+        class="inline-block px-6 py-2 text-white font-bold bg-red-500 rounded-lg shadow-md hover:bg-red-400 transition">
+        Donate Now
+      </a>
+      <button class="absolute top-2 right-2 text-black text-bold hover:text-gray-950" onclick="closePopup()">
+        &#x2715;
+      </button>
+    </div>
+  </div>
 
+
+
+
+  <script>
+    // Show the popup after 10 seconds
+    setTimeout(() => {
+      const popup = document.getElementById('popup-card');
+      const popupContent = document.getElementById('popup-content');
+
+      // Show the overlay and animate the popup
+      popup.classList.remove('hidden');
+      setTimeout(() => {
+        popupContent.classList.remove('scale-0', 'opacity-0');
+        popupContent.classList.add('scale-100', 'opacity-100');
+      }, 100); // Small delay for animation to sync
+    }, 5000); // 5,000ms = 5 seconds
+
+    // Close popup function
+    function closePopup() {
+      const popup = document.getElementById('popup-card');
+      const popupContent = document.getElementById('popup-content');
+
+      // Hide the popup with animation
+      popupContent.classList.add('scale-0', 'opacity-0');
+      setTimeout(() => {
+        popup.classList.add('hidden');
+      }, 500); // Wait for animation to finish
+    }
+
+  </script>
   <!-- Carousel Start -->
   <div class="carousel-header">
     <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
@@ -157,7 +210,9 @@
           <div class="carousel-caption">
             <div class="text-center p-4" style="max-width: 900px;">
               <h1 class="text-white text-uppercase fw-bold mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <strong><bold>Welcome to Touhid Education Society</bold></strong>
+                <strong>
+                  <bold>Welcome to Touhid Education Society</bold>
+                </strong>
               </h1>
               <h2 class="display-11 text-capitalize text-white mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.3s">
                 Empowering the Community Through Education Since 1953
@@ -602,7 +657,7 @@
   </div>
   <!-- Testimonial End -->
 
-  
+
 
   <!-- Footer Start -->
   <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
@@ -611,8 +666,9 @@
         <div class="col-md-6 col-lg-6 col-xl-3">
           <div class="footer-item d-flex flex-column">
             <h4 class="text-secondary mb-4">Contact Info</h4>
-            <a href="https://maps.app.goo.gl/hyTKKztCCHATinqn6"><i class="fa fa-map-marker-alt me-2"></i> Touhid Education Society<br>
-              Unity Educational Complex, 
+            <a href="https://maps.app.goo.gl/hyTKKztCCHATinqn6"><i class="fa fa-map-marker-alt me-2"></i> Touhid
+              Education Society<br>
+              Unity Educational Complex,
               Kodibag, Karwar - 581 303
               Karnataka,India </a>
             <a href=""><i class="fas fa-envelope me-2"></i> tesoffice53@gmail.com</a>

@@ -83,7 +83,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
       <a href="/" class="navbar-brand p-0">
         <h1 class="display-5 text-secondary m-0">
-          <img src="img\img\unity_logo.jpg" class="img-fluid" alt=""  style="width: 250px; height: auto;"/>
+          <img src="img\img\unity_logo.jpg" class="img-fluid" alt="" style="width: 250px; height: auto;" />
         </h1>
         <!-- <img src="img/logo.png" alt="Logo"> -->
       </a>
@@ -113,7 +113,7 @@
           <a href="./about.html" class="nav-item nav-link">Unity Academy</a>
           <a href="./MyUnity.html" class="nav-item nav-link">My Unity</a>
           <a href="./Facilities.html" class="nav-item nav-link">Facilities</a>
-          <a href="Gallery.html" class="nav-item nav-link">Gallery </a>         
+          <a href="Gallery.html" class="nav-item nav-link">Gallery </a>
           <!-- <a href="contact.html" class="nav-item nav-link"> My Unity </a> -->
           <!-- <a href="contact.html" class="nav-item nav-link">Mother's Home </a> -->
           <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
@@ -121,9 +121,10 @@
         <div class="nav-item dropdown">
           <a href="#" class="nav-link" data-bs-toggle="dropdown"><span class="dropdown-toggle">More</span></a>
           <div class="dropdown-menu m-0" style="right: 0rem;">
-            <a href="./QudsiaBanuUnityWomen'sHostel.html" class="dropdown-item active">Qudsia Banu Unity <br>Women's Hostel
+            <a href="./QudsiaBanuUnityWomen'sHostel.html" class="dropdown-item active">Qudsia Banu Unity <br>Women's
+              Hostel
             </a>
-            
+
           </div>
         </div>
         <!-- <button class="btn btn-primary btn-md-square border-secondary mb-3 mb-md-3 mb-lg-0 me-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button> -->
@@ -152,7 +153,59 @@
     </div>
   </div>
   <!-- Modal Search End -->
+  <div id="popup-card"
+    class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50 backdrop-blur-sm">
+    <div id="popup-content"
+      class="bg-gradient-to-r from-blue-50 via-blue-200 to-blue-50 rounded-lg shadow-md p-8 w-96 text-center relative scale-0 opacity-0 transform transition-all duration-500">
+      <h2 class="text-3xl font-bold text-blue-950 text-bold mb-4">Help Us Grow</h2>
+      <p class="text-blue-900 mb-4 italic">
+        <strong>“An investment in knowledge pays the best interest.” – Benjamin Franklin</strong>
+      </p>
+      <p class="text-blue-900 mb-6">
+        <strong>Your generous contribution helps us provide better educational opportunities to those in need. Together,
+          we can
+          change lives.</strong>
+      </p>
+      <a href="/Help us grow.html"
+        class="inline-block px-6 py-2 text-white font-bold bg-red-500 rounded-lg shadow-md hover:bg-red-400 transition">
+        Donate Now
+      </a>
+      <button class="absolute top-2 right-2 text-black text-bold hover:text-gray-950" onclick="closePopup()">
+        &#x2715;
+      </button>
+    </div>
+  </div>
 
+
+
+
+  <script>
+    // Show the popup after 10 seconds
+    setTimeout(() => {
+      const popup = document.getElementById('popup-card');
+      const popupContent = document.getElementById('popup-content');
+
+      // Show the overlay and animate the popup
+      popup.classList.remove('hidden');
+      setTimeout(() => {
+        popupContent.classList.remove('scale-0', 'opacity-0');
+        popupContent.classList.add('scale-100', 'opacity-100');
+      }, 100); // Small delay for animation to sync
+    }, 5000); // 5,000ms = 5 seconds
+
+    // Close popup function
+    function closePopup() {
+      const popup = document.getElementById('popup-card');
+      const popupContent = document.getElementById('popup-content');
+
+      // Hide the popup with animation
+      popupContent.classList.add('scale-0', 'opacity-0');
+      setTimeout(() => {
+        popup.classList.add('hidden');
+      }, 500); // Wait for animation to finish
+    }
+
+  </script>
   <!-- Header Start -->
   <div class="container-fluid bg-breadcrumb">
     <div class="container text-center py-5" style="max-width: 900px;">
@@ -188,7 +241,7 @@
             Sponsorship from our generous donors helps us cover the basic needs of our girls in both homes such as food,
             clothing, school fees, medical expenses, etc.
           </p>
-          
+
         </div>
       </div>
     </div>
