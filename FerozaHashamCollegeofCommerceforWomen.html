@@ -138,68 +138,52 @@
         </li>
         <!-- CTA Button -->
         <li class="nav-item ms-lg-3">
-          <a href="/Help us grow.html" class="btn btn-primary border-0 shadow-sm rounded-pill py-2 px-4 text-white">
+          <a href="/Help us grow.html" class="btn btn-flashy">
             Help us grow!
           </a>
         </li>
+        <style>
+          .btn-flashy {
+            background: linear-gradient(45deg, #ff6a00, #ee0979);
+            color: black;
+            /* Ensures text is visible on default state */
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase;
+            animation: glowing 1.5s infinite alternate;
+            transition: transform 0.2s ease-in-out, background 0.3s ease, color 0.3s ease;
+          }
+
+          .btn-flashy:hover {
+            transform: scale(1.1);
+            background: linear-gradient(45deg, #ee0979, #ff6a00);
+            color: white;
+            /* Change text color to white for better contrast */
+          }
+
+          @keyframes glowing {
+            0% {
+              box-shadow: 0 0 5px #ff6a00, 0 0 10px #ee0979, 0 0 15px #ff6a00;
+            }
+
+            100% {
+              box-shadow: 0 0 20px #ff6a00, 0 0 30px #ee0979, 0 0 40px #ff6a00;
+            }
+          }
+        </style>
       </ul>
     </div>
   </nav>
 </div>
-<!-- Navbar & Hero End -->
-<div id="popup-card"
-  class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50 backdrop-blur-sm">
-  <div id="popup-content"
-    class="bg-gradient-to-r from-blue-50 via-blue-200 to-blue-50 rounded-lg shadow-md p-8 w-96 text-center relative scale-0 opacity-0 transform transition-all duration-500">
-    <h2 class="text-3xl font-bold text-blue-950 text-bold mb-4">Help Us Grow</h2>
-    <p class="text-blue-900 mb-4 italic">
-      <strong>“An investment in knowledge pays the best interest.” – Benjamin Franklin</strong>
-    </p>
-    <p class="text-blue-900 mb-6">
-      <strong>Your generous contribution helps us provide better educational opportunities to those in need. Together,
-        we can
-        change lives.</strong>
-    </p>
-    <a href="/Help us grow.html"
-      class="inline-block px-6 py-2 text-white font-bold bg-red-500 rounded-lg shadow-md hover:bg-red-400 transition">
-      Donate Now
-    </a>
-    <button class="absolute top-2 right-2 text-black text-bold hover:text-gray-950" onclick="closePopup()">
-      &#x2715;
-    </button>
-  </div>
+</ul>
 </div>
+</nav>
+</div>
+<!-- Navbar & Hero End -->
 
-
-
-
-<script>
-  // Show the popup after 10 seconds
-  setTimeout(() => {
-    const popup = document.getElementById('popup-card');
-    const popupContent = document.getElementById('popup-content');
-
-    // Show the overlay and animate the popup
-    popup.classList.remove('hidden');
-    setTimeout(() => {
-      popupContent.classList.remove('scale-0', 'opacity-0');
-      popupContent.classList.add('scale-100', 'opacity-100');
-    }, 100); // Small delay for animation to sync
-  }, 5000); // 5,000ms = 5 seconds
-
-  // Close popup function
-  function closePopup() {
-    const popup = document.getElementById('popup-card');
-    const popupContent = document.getElementById('popup-content');
-
-    // Hide the popup with animation
-    popupContent.classList.add('scale-0', 'opacity-0');
-    setTimeout(() => {
-      popup.classList.add('hidden');
-    }, 500); // Wait for animation to finish
-  }
-
-</script>
 <!-- Modal Search Start -->
 <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-fullscreen">
