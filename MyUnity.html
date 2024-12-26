@@ -147,6 +147,59 @@
     </nav>
   </div>
   <!-- Navbar & Hero End -->
+  <div id="popup-card"
+    class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50 backdrop-blur-sm">
+    <div id="popup-content"
+      class="bg-gradient-to-r from-blue-50 via-blue-200 to-blue-50 rounded-lg shadow-md p-8 w-96 text-center relative scale-0 opacity-0 transform transition-all duration-500">
+      <h2 class="text-3xl font-bold text-blue-950 text-bold mb-4">Help Us Grow</h2>
+      <p class="text-blue-900 mb-4 italic">
+        <strong>“An investment in knowledge pays the best interest.” – Benjamin Franklin</strong>
+      </p>
+      <p class="text-blue-900 mb-6">
+        <strong>Your generous contribution helps us provide better educational opportunities to those in need. Together,
+          we can
+          change lives.</strong>
+      </p>
+      <a href="/Help us grow.html"
+        class="inline-block px-6 py-2 text-white font-bold bg-red-500 rounded-lg shadow-md hover:bg-red-400 transition">
+        Donate Now
+      </a>
+      <button class="absolute top-2 right-2 text-black text-bold hover:text-gray-950" onclick="closePopup()">
+        &#x2715;
+      </button>
+    </div>
+  </div>
+
+
+
+
+  <script>
+    // Show the popup after 10 seconds
+    setTimeout(() => {
+      const popup = document.getElementById('popup-card');
+      const popupContent = document.getElementById('popup-content');
+
+      // Show the overlay and animate the popup
+      popup.classList.remove('hidden');
+      setTimeout(() => {
+        popupContent.classList.remove('scale-0', 'opacity-0');
+        popupContent.classList.add('scale-100', 'opacity-100');
+      }, 100); // Small delay for animation to sync
+    }, 5000); // 5,000ms = 5 seconds
+
+    // Close popup function
+    function closePopup() {
+      const popup = document.getElementById('popup-card');
+      const popupContent = document.getElementById('popup-content');
+
+      // Hide the popup with animation
+      popupContent.classList.add('scale-0', 'opacity-0');
+      setTimeout(() => {
+        popup.classList.add('hidden');
+      }, 500); // Wait for animation to finish
+    }
+
+  </script>
   <!-- Modal Search Start -->
   <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">

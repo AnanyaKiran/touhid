@@ -89,8 +89,9 @@
       <div class="col-lg-5 text-center text-lg-start mb-lg-0">
         <div class="d-flex">
           <a href="mailto:tesoffice53@gmail.com" class="text-white me-4 "><i
-            class="fas fa-envelope text-secondary text-red me-2"></i>tesoffice53@gmail.com</a>
-          <a href="#" class="text-white me-0"><i class="fas fa-phone-alt text-red text-secondary me-2"></i>08382-225295</a>
+              class="fas fa-envelope text-secondary text-red me-2"></i>tesoffice53@gmail.com</a>
+          <a href="#" class="text-white me-0"><i
+              class="fas fa-phone-alt text-red text-secondary me-2"></i>08382-225295</a>
         </div>
       </div>
       <div class="col-lg-3 row-cols-1 text-center mb-2 mb-lg-0">
@@ -115,15 +116,15 @@
   <!-- Navbar & Hero Start -->
   <div class="container-fluid nav-bar p-0 shadow-sm">
     <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
-        <!-- Logo -->
-        <a href="/" class="navbar-brand p-0">
-            <img src="img\img\unity_logo.jpg" class="img-fluid" alt="Logo" style="width:auto; height: auto;"/>
-        </a>
-        <!-- Navbar Toggler -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="fa fa-bars"></span>
-        </button>
+      <!-- Logo -->
+      <a href="/" class="navbar-brand p-0">
+        <img src="img\img\unity_logo.jpg" class="img-fluid" alt="Logo" style="width:auto; height: auto;" />
+      </a>
+      <!-- Navbar Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fa fa-bars"></span>
+      </button>
 
       <!-- Navbar Content -->
       <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -175,13 +176,43 @@
           <li class="nav-item">
             <a href="Gallery.html" class="nav-link">Gallery</a>
           </li>
-          <!-- CTA Button -->
           <li class="nav-item ms-lg-3">
-            <a href="/Help us grow.html"
-              class="btn btn-primary border-0 shadow-sm rounded-pill py-2 px-4 text-white active">
+            <a href="/Help us grow.html" class="btn btn-flashy">
               Help us grow!
             </a>
           </li>
+          <style>
+            .btn-flashy {
+              background: linear-gradient(45deg, #ff6a00, #ee0979);
+              color: black;
+              /* Ensures text is visible on default state */
+              font-weight: bold;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 50px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+              text-transform: uppercase;
+              animation: glowing 1.5s infinite alternate;
+              transition: transform 0.2s ease-in-out, background 0.3s ease, color 0.3s ease;
+            }
+
+            .btn-flashy:hover {
+              transform: scale(1.1);
+              background: linear-gradient(45deg, #ee0979, #ff6a00);
+              color: white;
+              /* Change text color to white for better contrast */
+            }
+
+            @keyframes glowing {
+              0% {
+                box-shadow: 0 0 5px #ff6a00, 0 0 10px #ee0979, 0 0 15px #ff6a00;
+              }
+
+              100% {
+                box-shadow: 0 0 20px #ff6a00, 0 0 30px #ee0979, 0 0 40px #ff6a00;
+              }
+            }
+          </style>
         </ul>
       </div>
     </nav>
@@ -320,23 +351,23 @@
   </div>
   </div>
 
-<script>module.exports = {
-  theme: {
-    extend: {
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+  <script>module.exports = {
+      theme: {
+        extend: {
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+          },
+          animation: {
+            fadeIn: 'fadeIn 1.5s ease-in-out',
+          },
         },
       },
-      animation: {
-        fadeIn: 'fadeIn 1.5s ease-in-out',
-      },
-    },
-  },
-  plugins: [],
-};
-</script>
+      plugins: [],
+    };
+  </script>
 
   <!-- Footer Start -->
   <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
