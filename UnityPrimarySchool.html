@@ -308,80 +308,138 @@
 <!-- Faculty Section Start -->
 <div class="container-fluid faculty overflow-hidden py-5">
   <div class="container">
-    <div class="section-title text-center mb-5 " >
+    <div class="section-title text-center mb-5">
       <div class="sub-style">
         <h5 class="sub-title text-primary px-3">Our Faculty</h5>
       </div>
     </div>
-    <div class="faculty-scrollable" style="max-height: 200px; overflow-y: auto; overflow-x: hidden;">
-      <div class="row g-4 justify-content-center text-center">
+    <div class="faculty-slider-container position-relative">
+      <!-- Faculty Slider -->
+      <div class="faculty-slider d-flex align-items-center" id="facultySlider">
         <!-- Faculty Grid -->
-        <!-- Repeat this block for each teacher -->
-        <div class="col-md-3 col-sm-6 col-lg-2 " >
-          <div class="faculty-item text-center p-3">
-            <div class="faculty-image mb-3">
-              <img src="img/faculty/UP-1.jpg" alt="Teacher Image" class="w-100 rounded-circle">
-            </div>
-            <div class="faculty-content">
-              <h6 class="mb-0">Mrs. Mehtab Kausar Khazi</h6>
-            </div>
+        <div class="faculty-item text-center p-3 mx-2">
+          <div class="faculty-image mb-3">
+            <img src="img/faculty/UP-1.jpg"
+              alt="Teacher Image" class="faculty-img">
+          </div>
+          <div class="faculty-content">
+            <h6 class="text-truncate">Mehtab <br> Kausar Khazi</h6>
           </div>
         </div>
-        <!-- Repeatable blocks for all teachers -->
-        <div class="col-md-3 col-sm-6 col-lg-2 ">
-          <div class="faculty-item text-center p-3">
-            <div class="faculty-image mb-3">
-              <img src="img/faculty/UP-2.jpg" alt="Teacher Image" class="w-100 rounded-circle">
-            </div>
-            <div class="faculty-content">
-              <h6 class="mb-0">Miss. Preeti Dyanand Naik</h6>
-            </div>
+        <div class="faculty-item text-center p-3 mx-2">
+          <div class="faculty-image mb-3">
+            <img src="img/faculty/UP-2.jpg" alt="Teacher Image" class="faculty-img">
+          </div>
+          <div class="faculty-content">
+            <h6>Preeti Dyanand Naik</h6>
           </div>
         </div>
-        <div class="col-md-3 col-sm-6 col-lg-2 ">
-          <div class="faculty-item text-center p-3">
-            <div class="faculty-image mb-3">
-              <img src="img/faculty/UP-3.jpg" alt="Teacher Image" class="w-100 rounded-circle">
-            </div>
-            <div class="faculty-content">
-              <h6 class="mb-0">Mrs. Khurshida Banu Subhaktgin Shaikh</h6>
-            </div>
+        <div class="faculty-item text-center p-3 mx-2">
+          <div class="faculty-image mb-3">
+            <img src="img/faculty/UP-3.jpg" alt="Teacher Image" class="faculty-img">
+          </div>
+          <div class="faculty-content">
+            <h6>Khurshida Banu <br>Subhaktgin Shaikh</h6>
           </div>
         </div>
-        <div class="col-md-3 col-sm-6 col-lg-2 ">
-          <div class="faculty-item text-center p-3">
-            <div class="faculty-image mb-3">
-              <img src="img/faculty/UP-4.jpg" alt="Teacher Image" class="w-100 rounded-circle">
-            </div>
-            <div class="faculty-content">
-              <h6 class="mb-0">Mrs. Safoora Parveen Abdul Sattar Shaikh</h6>
-            </div>
+        <div class="faculty-item text-center p-3 mx-2">
+          <div class="faculty-image mb-3">
+            <img src="img/faculty/UP-4.jpg"
+              alt="Teacher Image" class="faculty-img">
+          </div>
+          <div class="faculty-content">
+            <h6 class="text-truncate">Safoora <br> Parveen  Abdul <br> Sattar Shaikh</h6>
           </div>
         </div>
-       </div>
+      </div>
     </div>
   </div>
 </div>
 <!-- Faculty Section End -->
 
-<!-- Add the following CSS -->
+<!-- CSS -->
 <style>
-  .faculty-scrollable {
-    max-height: 100px; /* Adjust height as needed */
-    overflow-y: auto; /* Enable vertical scrolling */
-    overflow-x: hidden; /* Hide horizontal scrolling */
+  .faculty-slider-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
   }
-  .faculty-scrollable::-webkit-scrollbar {
-    width: 8px; /* Customize scrollbar width */
+
+  .faculty-slider {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px;
   }
-  .faculty-scrollable::-webkit-scrollbar-thumb {
-    background: #d3d3d3; /* Grey scrollbar color */
-    border-radius: 4px; /* Rounded corners */
+
+  .faculty-slider::-webkit-scrollbar {
+    display: none;
   }
-  .faculty-scrollable::-webkit-scrollbar-thumb:hover {
-    background: #a0a0a0; /* Darker grey on hover */
+
+  .faculty-item {
+    flex: 0 0 auto;
+    width: 150px;
+  }
+
+  .faculty-image {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .faculty-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid black;
+  }
+
+  .faculty-content {
+    height: 60px;
+    /* Fixed height to ensure alignment */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .scroll-btn {
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f8f9fa;
+    border: none;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .scroll-btn:hover {
+    background-color: #e9ecef;
+  }
+
+  .left-btn {
+    left: 10px;
+  }
+
+  .right-btn {
+    right: 10px;
   }
 </style>
+
+<!-- JavaScript -->
+<script>
+  function scrollFaculty(direction) {
+    const slider = document.getElementById('facultySlider');
+    const scrollAmount = 200;
+    slider.scrollLeft += direction * scrollAmount;
+  }
+</script>
 
 
   <!-- Footer Start -->
