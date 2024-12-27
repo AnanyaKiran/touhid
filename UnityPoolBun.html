@@ -308,10 +308,6 @@
         </div>
       </div>
       <div class="faculty-slider-container position-relative">
-        <!-- Left Button -->
-        <button class="scroll-btn left-btn position-absolute" onclick="scrollFaculty(-1)">
-          &#8249;
-        </button>
 
         <!-- Faculty Slider -->
         <div class="faculty-slider d-flex align-items-center" id="facultySlider">
@@ -322,7 +318,7 @@
                 alt="Teacher Image" class="faculty-img">
             </div>
             <div class="faculty-content">
-              <h6 class="mb-0 text-truncate">Mrs. Preeti Panduranga Nagarkatte</h6>
+              <h6 class="mb-0 text-truncate">Preeti <br> Panduranga <br>Nagarkatte</h6>
             </div>
           </div>
           <div class="faculty-item text-center p-3 mx-2">
@@ -343,10 +339,6 @@
           </div>
         </div>
 
-        <!-- Right Button -->
-        <button class="scroll-btn right-btn position-absolute" onclick="scrollFaculty(1)">
-          &#8250;
-        </button>
       </div>
     </div>
   </div>
@@ -376,7 +368,12 @@
     .faculty-item {
       flex: 0 0 auto;
       width: 150px;
-      /* Adjust width as needed */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* Centers content vertically */
+      align-items: center;
+      /* Centers content horizontally */
     }
 
     .faculty-image {
@@ -402,7 +399,11 @@
 
     .faculty-content {
       min-height: 50px;
-      /* Adjust height to accommodate names */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      /* Centers multiline text horizontally */
     }
 
     .scroll-btn {
