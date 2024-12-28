@@ -295,15 +295,15 @@
           <h5 class="sub-title pe-3">Unity Stories</h5>
           <p class="mb-4">
 
-          <div class="relative rounded-lg overflow-hidden border border-gray-200 shadow-md mb-4">
+          <div class="video-container">
             <!-- Video Embed -->
-            <video id="unityVideo" class="w-full h-60 object-contain" controls muted>
+            <video id="unityVideo" class="video" controls muted>
               <source src="img/TES Pride.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
 
-          <p class="text-gray-600 leading-relaxed">
+          <p class="text-description">
             Watch the inspiring stories of Unity through this video, showcasing the essence of teamwork and
             achievements.
           </p>
@@ -331,12 +331,39 @@
 
           observer.observe(video);
         </script>
+        <style>
+          /* Container for centering the video */
+          .video-container {
+            position: relative;
+            width: 100%;
+            height: 240px;
+            /* Adjust as needed for video height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+            /* Border color */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          }
 
-        <!-- Tailwind CSS -->
-        <script src="https://cdn.tailwindcss.com"></script>
+          /* Video styling */
+          .video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            /* Ensures the video fits within the container */
+          }
 
-
-
+          /* Description text styling */
+          .text-description {
+            color: #4a4a4a;
+            /* Gray text color */
+            line-height: 1.6;
+            margin-top: 15px;
+          }
+        </style>
 
         <div class="row g-5">
           <div class="col-xl-7 wow fadeInLeft" data-wow-delay="0.5s">
@@ -375,7 +402,7 @@
               <a href="https://maps.app.goo.gl/hyTKKztCCHATinqn6"><i class="fa fa-map-marker-alt me-2"></i>Touhid
                 Education Society<br>
                 Unity Educational Complex,
-                Kodibag, Karwar - 581 303
+                Kodibag, Karwar - 581 303
                 Karnataka,India</a>
               <a href=""><i class="fas fa-envelope me-2"></i>tesoffice53@touhidedu.com</a>
               <a href=""><i class="fas fa-phone me-2"></i>+91 8382225259</a>
