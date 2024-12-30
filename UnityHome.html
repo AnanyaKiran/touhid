@@ -133,7 +133,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="people.html" class="nav-link ">People</a>
-                      </li>
+                    </li>
                     <li class="nav-item">
                         <a href="./Facilities.html" class="nav-link">Facilities</a>
                     </li>
@@ -265,6 +265,40 @@
         .breadcrumb {
             margin: 0;
             /* Optional: Removes any default margin around the text */
+        }
+
+        /* Media Query for smaller screens */
+        @media (max-width: 768px) {
+            .header-bg-container {
+                background-size: 100% 100%;
+                /* Makes the images cover the full width */
+                background-position: center;
+                /* Ensures the background image stays centered */
+                height: 300px;
+                /* Adjusts the height for smaller screens */
+            }
+
+            .container.text-center {
+                max-width: 100%;
+                /* Allow the text container to expand */
+            }
+        }
+
+        /* Media Query for very small screens (like mobile) */
+        @media (max-width: 480px) {
+            .header-bg-container {
+                background-size: 100% 100%;
+                /* Makes images cover full screen */
+                background-position: center;
+                /* Center images */
+                height: 250px;
+                /* Adjust height for very small screens */
+            }
+
+            h3 {
+                font-size: 2rem;
+                /* Smaller text on very small screens */
+            }
         }
     </style>
 
