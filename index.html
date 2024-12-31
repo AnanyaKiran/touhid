@@ -183,6 +183,95 @@
   <div id="popup-card"
     class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50 backdrop-blur-sm">
     <div id="popup-content"
+      class="bg-gradient-to-r from-blue-50 via-blue-200 to-blue-50 rounded-lg shadow-md p-8 w-5/6 h-4/6 flex relative scale-0 opacity-0 transform transition-all duration-500">
+
+      <!-- Close Button -->
+      <button onclick="closePopup()"
+        class="absolute top-2 right-2 text-white bg-red-600 p-1 rounded-full hover:bg-red-400 transition-all">
+        x
+      </button>
+
+      <!-- Image card (constant on the left side) -->
+      <div class="w-40 h-40 border-4 border-blue-600 rounded-full overflow-hidden mr-6">
+        <img src="img/Eitbar.jpg" alt="President Image" class="w-full h-full object-cover">
+      </div>
+
+      <!-- Scrollable Text content on the right side -->
+      <div class="flex-1 overflow-y-auto text-left">
+        <h2 class="text-3xl font-bold text-blue-950 text-bold mb-4">Our President's Message</h2>
+        <p class="text-blue-900 mb-4 text-sm italic">
+          “Welcome! We are delighted to invite you to explore our Group of Institutions and participate in our journey
+          of nurturing young minds and shaping their future. We firmly believe, that “No child should be deprived of
+          receiving education due to lack of funds and resources.”
+        </p>
+        <p class="text-blue-900 text-sm mb-6">
+          I am privileged to share our Story, how from a tiny sapling, our Unity Group of Institutions have grown into a
+          mighty tree. Sky is the limit for us, and we aspire to further grow! In June of 1953, when Rahimkhan Unity
+          High School (RUHS) was founded by my late father, Rahimkhan Omerkhan, I was only 12 years old and its first
+          student. Since then, I have watched its growth,  its trials and turbulations, its success and failures from
+          the closest quarters, our own home. My Mother stood by my father’s every move and provided unquestionable
+          support. The School Staff and its teachers, despite numerous difficulties stood strong by their Founder.
+          Others often considered it to be a sinking ship, kept themselves aloof to save themselves from ruination. Such
+          situations did not deter my father from further development till it was a complete High School from Nursery
+          (Kindergarten) to Std XI, later termed as SSLC. Today, we are spread across 8 institutions, we offer courses
+          from Kindergarten to Degree College.
+        </p>
+        <p class="text-blue-900 mb-4 text-sm">
+          In 1977, upon the sad demise of my mother, my father sheltered a poor family of five in his own home and
+          looked after their every need, without any outside support.  As the number of children grew, my father had the
+          vision to realise that the support from family may not be lasting for ever, due to fluctuations and vagaries
+          of life, and hence decided to take these children under the umbrella of Touhid Education Society (TES). We
+          named it as Mother's Home, inspired by the well-known similar Home in Mumbai known as 'Baap nu ghar' (Father's
+          Home).
+        </p>
+        <p class="text-blue-900 mb-4 text-sm">
+          Mother's Home initially had about 50 girls, but 13 of them had to be excluded owing to the Department's strict
+          regulations. Thus, Qudsia Banu Unity Women's Home was born. Today, this is a 2-storeyed building with 83
+          under-privileged girls. All 120 girls in both Home’s are provided with full amenities and are enrolled in the
+          Unity Group of Institutions. We have ambitious plans to start new courses such as Degree in Business
+          Management, Banking, Public Speaking and Personality Development, Vocational Training for Technical Trades,
+          and also pursue our application for introducing NCC Training. We also plan to upgrade our existing
+          infrastructure and facilities. After a long innings of 39 years as President of TES and its Unity Group of
+          Institutions, I have stepped down, making way for Vice-President, Dr. Fazila Patankar, to take over as the new
+          President. With over 17 years of experience in Public Health, I am confident that She, along with  TES
+          Management, will deal squarely with all the challenges and further elevate the status of our Institutions to
+          make them the most sought-after in the City of Karwar.<br> <b>-Etibar Shah R Khan President Emeritus</b>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Show the popup after 10 seconds
+    setTimeout(() => {
+      const popup = document.getElementById('popup-card');
+      const popupContent = document.getElementById('popup-content');
+
+      // Show the overlay and animate the popup
+      popup.classList.remove('hidden');
+      setTimeout(() => {
+        popupContent.classList.remove('scale-0', 'opacity-0');
+        popupContent.classList.add('scale-100', 'opacity-100');
+      }, 100); // Small delay for animation to sync
+    }, 2000); // 5,000ms = 5 seconds
+
+    // Close popup function
+    function closePopup() {
+      const popup = document.getElementById('popup-card');
+      const popupContent = document.getElementById('popup-content');
+
+      // Hide the popup with animation
+      popupContent.classList.add('scale-0', 'opacity-0');
+      setTimeout(() => {
+        popup.classList.add('hidden');
+      }, 500); // Wait for animation to finish
+    }
+  </script>
+
+
+  <div id="popup-card"
+    class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50 backdrop-blur-sm">
+    <div id="popup-content"
       class="bg-gradient-to-r from-blue-50 via-blue-200 to-blue-50 rounded-lg shadow-md p-8 w-96 text-center relative scale-0 opacity-0 transform transition-all duration-500">
       <h2 class="text-3xl font-bold text-blue-950 text-bold mb-4">Help Us Grow!</h2>
       <p class="text-blue-900 mb-4 italic">
@@ -214,7 +303,7 @@
         popupContent.classList.remove('scale-0', 'opacity-0');
         popupContent.classList.add('scale-100', 'opacity-100');
       }, 100); // Small delay for animation to sync
-    }, 3000); // 5,000ms = 5 seconds
+    }, 15000); // 5,000ms = 5 seconds
 
     // Close popup function
     function closePopup() {
@@ -568,7 +657,6 @@
                   Bridging the gap between students, teachers, and parents by providing comprehensive software training
                   for a more connected learning experience.
                 </p>
-                <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Explore More</a>
               </div>
             </div>
           </div>
@@ -587,7 +675,6 @@
                   Promoting health and fitness through sports and physical activities, helping students develop
                   discipline and teamwork.
                 </p>
-                <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Explore More</a>
               </div>
             </div>
           </div>
@@ -606,7 +693,6 @@
                   Inspiring creativity and problem-solving skills through hands-on learning in Science, Technology,
                   Engineering, and Mathematics (STEM).
                 </p>
-                <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Explore More</a>
               </div>
             </div>
           </div>
@@ -624,7 +710,6 @@
                 <p class="mb-4">
                   Preparing young minds for the future by introducing them to the latest in technology and innovation.
                 </p>
-                <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Explore More</a>
               </div>
             </div>
           </div>
@@ -643,7 +728,6 @@
                   Providing students with practical skills and training to prepare them for the modern workforce,
                   ensuring they are ready for real-world challenges.
                 </p>
-                <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Explore More</a>
               </div>
             </div>
           </div>
@@ -662,7 +746,6 @@
                   Offering lifelong learning opportunities for adults to enhance their education, acquire new skills,
                   and grow in their personal and professional lives.
                 </p>
-                <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Explore More</a>
               </div>
             </div>
           </div>
@@ -671,25 +754,6 @@
     </div>
   </div>
   <!-- Courses End -->
-
-
-
-  <!-- Testimonial Start -->
-  <div class="container-fluid testimonial overflow-hidden pb-5">
-    <div class="container py-5">
-      <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="sub-style">
-          <h5 class="sub-title text-primary px-3">Our President's Message</h5>
-        </div>
-
-      </div>
-
-
-    </div>
-  </div>
-  <!-- Testimonial End -->
-
-
 
   <!-- Footer Start -->
   <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
