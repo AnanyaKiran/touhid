@@ -213,287 +213,255 @@
   </div>
   <!-- Header End -->
   <!-- Gallery Section -->
-  <div class="container py-5 bg-gray-100"> <!-- Section with a light gray background -->
-    <h2 class="text-center mb-4 text-gray-800 font-bold">Gallery</h2> <!-- Updated heading color and font style -->
+  <div class="container py-5 bg-gray-100">
+    <h2 class="text-center mb-4 text-gray-800 font-bold">Gallery</h2>
 
-    <div class="accordion" id="galleryAccordion">
-      <!-- Unity Homes -->
-      <div class="accordion-item mb-3">
-        <h3 class="accordion-header" id="headingUnityHomes">
-          <button class="accordion-button collapsed text-black bg-gray-800 hover:bg-gray-300" type="button"
-            data-bs-toggle="collapse" data-bs-target="#collapseUnityHomes" aria-expanded="false"
-            aria-controls="collapseUnityHomes">
-            Unity Homes
-          </button>
-        </h3>
-        <div id="collapseUnityHomes" class="accordion-collapse collapse" aria-labelledby="headingUnityHomes"
-          data-bs-parent="#galleryAccordion">
-          <div class="accordion-body">
-            <div class="row g-4">
-              <div class="col-lg-4 col-md-6">
-                <img src="img/Unity Home header-1.jpg" class="img-fluid rounded shadow-lg" alt="Unity Homes Image 1">
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <img src="img/Unity Home header-2.jpg" class="img-fluid rounded shadow-lg" alt="Unity Homes Image 2">
-              </div>
+    <!-- Gallery Cards -->
+      <div class="row g-4">
+        <!-- Unity Homes Card -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100">
+            <img src="img\Unity Home header-1.jpg" class="card-img-top" alt="Unity Homes Cover">
+            <div class="card-body text-center">
+              <h5 class="card-title">Unity Homes</h5>
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                data-section="unityHomes">View Gallery</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unity Academy Card -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100">
+            <img src="img\Unity-Academy-Bg.jpg" class="card-img-top" alt="Unity Academy Cover">
+            <div class="card-body text-center">
+              <h5 class="card-title">Unity Academy</h5>
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                data-section="unityAcademy">View Gallery</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Cards (Repeat for other sections) -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100">
+            <img src="img\unity-phool-bun.jpg" class="card-img-top" alt="Unity Phool Bun Cover">
+            <div class="card-body text-center">
+              <h5 class="card-title">Unity Phool Bun</h5>
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                data-section="unityPhoolBun">View Gallery</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- RHS -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100">
+            <img src="img\RHS-2.jpg" class="card-img-top" alt="RHS Cover">
+            <div class="card-body text-center">
+              <h5 class="card-title">RHS</h5>
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                data-section="rhs">View Gallery</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- RHS Exhibition -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100">
+            <img src="img\RHS-5.jpg" class="card-img-top" alt="RHS Exhibition Cover">
+            <div class="card-body text-center">
+              <h5 class="card-title">RHS Exhibition</h5>
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                data-section="rhsExhibition">View Gallery</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- UBDC Exhibition -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100">
+            <img src="img\bg\BDS-BG.jpg" class="card-img-top" alt="UBDC Exhibition Cover">
+            <div class="card-body text-center">
+              <h5 class="card-title">UBDC Exhibition</h5>
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                data-section="ubdcExhibition">View Gallery</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Robotics -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100">
+            <img src="img\robotics\IMG-20241231-WA0054.jpg" class="card-img-top" alt="Robotics Cover">
+            <div class="card-body text-center">
+              <h5 class="card-title">Robotics</h5>
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                data-section="robotics">View Gallery</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Amerbi -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100">
+            <img src="img\Ameera.jpg" class="card-img-top" alt="Amerbi Cover">
+            <div class="card-body text-center">
+              <h5 class="card-title">Amerbi</h5>
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                data-section="amerbi">View Gallery</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feroza -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100">
+            <img src="img\FHS-ARPUC BG.jpg" class="card-img-top" alt="Feroza Cover">
+            <div class="card-body text-center">
+              <h5 class="card-title">Feroza</h5>
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                data-section="feroza">View Gallery</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unity Bloomingdale -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100">
+            <img src="img\bloomingdale bg.jpg" class="card-img-top" alt="Unity Bloomingdale Cover">
+            <div class="card-body text-center">
+              <h5 class="card-title">Unity Bloomingdale</h5>
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                data-section="unityBloomingdale">View Gallery</button>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Unity Academy -->
-      <div class="accordion-item mb-3">
-        <h3 class="accordion-header" id="headingUnityAcademy">
-          <button class="accordion-button collapsed text-black bg-gray-800 hover:bg-gray-300" type="button"
-            data-bs-toggle="collapse" data-bs-target="#collapseUnityAcademy" aria-expanded="false"
-            aria-controls="collapseUnityAcademy">
-            Unity Academy
-          </button>
-        </h3>
-        <div id="collapseUnityAcademy" class="accordion-collapse collapse" aria-labelledby="headingUnityAcademy"
-          data-bs-parent="#galleryAccordion">
-          <div class="accordion-body">
-            <div class="row g-4">
-              <div class="col-lg-4 col-md-6">
-                <img src="img/Unity-Academy-Bg.jpg" class="img-fluid rounded shadow-lg" alt="Unity Academy Image 1">
-              </div>
-            </div>
+      <!-- Gallery Modal JavaScript -->
+      <script>
+        const galleryImages = {
+          unityHomes: ["img\home-1.jpg", "img\home-2.jpg"],
+          rhs: ["img\RHS-2.jpg", "img\RHS-3.jpg"],
+          rhsExhibition: ["img/RHS-Exhibition-1.jpg", "img/RHS-Exhibition-2.jpg"],
+          ubdcExhibition: ["img/UBDC-Exhibition-1.jpg", "img/UBDC-Exhibition-2.jpg"],
+          robotics: ["img/Robotics-1.jpg", "img/Robotics-2.jpg"],
+          amerbi: ["img/Amerbi-1.jpg", "img/Amerbi-2.jpg"],
+          feroza: ["img/Feroza-1.jpg", "img/Feroza-2.jpg"],
+          unityBloomingdale: ["img/Unity-Bloomingdale-1.jpg", "img/Unity-Bloomingdale-2.jpg"],
+        };
+
+        const galleryModal = document.getElementById('galleryModal');
+        const galleryContent = document.getElementById('galleryContent');
+
+        galleryModal.addEventListener('show.bs.modal', function (event) {
+          const button = event.relatedTarget;
+          const section = button.getAttribute('data-section');
+
+          galleryContent.innerHTML = '';
+
+          galleryImages[section].forEach((image) => {
+            const col = document.createElement('div');
+            col.classList.add('col-lg-3', 'col-md-4', 'col-sm-6');
+
+            const img = document.createElement('img');
+            img.src = image;
+            img.classList.add('img-fluid', 'rounded', 'shadow-sm');
+            img.alt = `${section} Image`;
+
+            col.appendChild(img);
+            galleryContent.appendChild(col);
+          });
+        });
+      </script>
+    </div>
+  </div>
+
+  <!-- Modal for Gallery -->
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="galleryModalLabel">Gallery</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4" id="galleryContent">
+            <!-- Dynamic images will be injected here -->
           </div>
         </div>
-      </div>
-
-      <!-- Phool Bun Primary -->
-      <div class="accordion-item mb-3">
-        <h3 class="accordion-header" id="headingPhoolBun">
-          <button class="accordion-button collapsed text-black bg-gray-800 hover:bg-gray-300" type="button"
-            data-bs-toggle="collapse" data-bs-target="#collapsePhoolBun" aria-expanded="false"
-            aria-controls="collapsePhoolBun">
-            Unity Phool Bun
-          </button>
-        </h3>
-        <div id="collapsePhoolBun" class="accordion-collapse collapse" aria-labelledby="headingPhoolBun"
-          data-bs-parent="#galleryAccordion">
-          <div class="accordion-body">
-            <div class="row g-4">
-              <div class="col-lg-4 col-md-6">
-                <img src="img/unity-phool-bun.jpg" class="img-fluid rounded shadow-lg" alt="Phool Bun Primary Image 1">
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <img src="img/UPBK-2.jpg" class="img-fluid rounded shadow-lg" alt="Phool Bun Primary Image 2">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Unity Primary -->
-      <div class="accordion-item mb-3">
-        <h3 class="accordion-header" id="headingUnityPrimary">
-          <button class="accordion-button collapsed text-black bg-gray-800 hover:bg-gray-300" type="button"
-            data-bs-toggle="collapse" data-bs-target="#collapseUnityPrimary" aria-expanded="false"
-            aria-controls="collapseUnityPrimary">
-            Unity Primary School
-          </button>
-        </h3>
-        <div id="collapseUnityPrimary" class="accordion-collapse collapse" aria-labelledby="headingUnityPrimary"
-          data-bs-parent="#galleryAccordion">
-          <div class="accordion-body">
-            <div class="row g-4">
-              <div class="col-lg-4 col-md-6">
-                <img src="img/primary-1.jpg" class="img-fluid rounded shadow-lg" alt="Unity Primary Image 1">
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <img src="img/primary-2.jpg" class="img-fluid rounded shadow-lg" alt="Unity Primary Image 2">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Blooming Dale -->
-      <div class="accordion-item mb-3">
-        <h3 class="accordion-header" id="headingBloomingDale">
-          <button class="accordion-button collapsed text-black bg-gray-800 hover:bg-gray-300" type="button"
-            data-bs-toggle="collapse" data-bs-target="#collapseBloomingDale" aria-expanded="false"
-            aria-controls="collapseBloomingDale">
-            Unity BloomingDale School
-          </button>
-        </h3>
-        <div id="collapseBloomingDale" class="accordion-collapse collapse" aria-labelledby="headingBloomingDale"
-          data-bs-parent="#galleryAccordion">
-          <div class="accordion-body">
-            <div class="row g-4">
-              <div class="col-lg-4 col-md-6">
-                <img src="img/Bloomingdale-1.jpg" class="img-fluid rounded shadow-lg" alt="Blooming Dale Image 1">
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <img src="img/bloomingdale-2.jpg" class="img-fluid rounded shadow-lg" alt="Blooming Dale Image 2">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Rahimkhan -->
-      <div class="accordion-item mb-3">
-        <h3 class="accordion-header" id="headingRahimkhan">
-          <button class="accordion-button collapsed text-black bg-gray-800 hover:bg-gray-300" type="button"
-            data-bs-toggle="collapse" data-bs-target="#collapseRahimkhan" aria-expanded="false"
-            aria-controls="collapseRahimkhan">
-            Rahimkhan Unity High School
-          </button>
-        </h3>
-        <div id="collapseRahimkhan" class="accordion-collapse collapse" aria-labelledby="headingRahimkhan"
-          data-bs-parent="#galleryAccordion">
-          <div class="accordion-body">
-            <div class="row g-4">
-              <div class="col-lg-4 col-md-6">
-                <img src="img/RHS-2.jpg" class="img-fluid rounded shadow-lg" alt="Rahimkhan Image 1">
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <img src="img/RHS-4.jpg" class="img-fluid rounded shadow-lg" alt="Rahimkhan Image 2">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Ameerbi -->
-      <div class="accordion-item mb-3">
-        <h3 class="accordion-header" id="headingAmeerbi">
-          <button class="accordion-button collapsed text-black bg-gray-800 hover:bg-gray-300" type="button"
-            data-bs-toggle="collapse" data-bs-target="#collapseAmeerbi" aria-expanded="false"
-            aria-controls="collapseAmeerbi">
-            Ameerbi Rahimkhan PU College of Commerce
-          </button>
-        </h3>
-        <div id="collapseAmeerbi" class="accordion-collapse collapse" aria-labelledby="headingAmeerbi"
-          data-bs-parent="#galleryAccordion">
-          <div class="accordion-body">
-            <div class="row g-4">
-              <div class="col-lg-4 col-md-6">
-                <img src="img/ARPUC-2.jpg" class="img-fluid rounded shadow-lg" alt="Ameerbi Image 1">
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <img src="img/ARPUC-4.jpg" class="img-fluid rounded shadow-lg" alt="Ameerbi Image 2">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feroza -->
-      <div class="accordion-item mb-3">
-        <h3 class="accordion-header" id="headingFeroza">
-          <button class="accordion-button collapsed text-black bg-gray-800 hover:bg-gray-300" type="button"
-            data-bs-toggle="collapse" data-bs-target="#collapseFeroza" aria-expanded="false"
-            aria-controls="collapseFeroza">
-            Feroza Hasham College of Commerce for Women
-          </button>
-        </h3>
-        <div id="collapseFeroza" class="accordion-collapse collapse" aria-labelledby="headingFeroza"
-          data-bs-parent="#galleryAccordion">
-          <div class="accordion-body">
-            <div class="row g-4">
-              <div class="col-lg-4 col-md-6">
-                <img src="img/FHC-1.jpg" class="img-fluid rounded shadow-lg" alt="Feroza Image 1">
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <img src="img/FHC-2.jpg" class="img-fluid rounded shadow-lg" alt="Feroza Image 2">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Robotics -->
-      <div class="accordion-item mb-3">
-        <h3 class="accordion-header" id="headingRobotics">
-          <button class="accordion-button collapsed text-black bg-gray-800 hover:bg-gray-300" type="button"
-            data-bs-toggle="collapse" data-bs-target="#collapseRobotics" aria-expanded="false"
-            aria-controls="collapseRobotics">
-            Robotics
-          </button>
-        </h3>
-        <div id="collapseRobotics" class="accordion-collapse collapse" aria-labelledby="headingRobotics"
-          data-bs-parent="#galleryAccordion">
-          <div class="accordion-body">
-            <div class="row g-4">
-              <div class="col-lg-4 col-md-6">
-                <img src="img/robotics/IMG-20241231-WA0054.jpg" class="img-fluid rounded shadow-lg hover-effect"
-                  alt="Robotics Image 1">
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <img src="img/robotics/IMG-20241231-WA0055.jpg" class="img-fluid rounded shadow-lg hover-effect"
-                  alt="Robotics Image 2">
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <img src="img/robotics/IMG-20241231-WA0056.jpg" class="img-fluid rounded shadow-lg hover-effect"
-                  alt="Robotics Image 3">
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <img src="img/robotics/IMG-20241231-WA0056.jpg" class="img-fluid rounded shadow-lg hover-effect"
-                  alt="Robotics Image 3">
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <img src="img/robotics/IMG-20241231-WA0058.jpg" class="img-fluid rounded shadow-lg hover-effect"
-                  alt="Robotics Image 3">
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <img src="img/robotics/IMG-20241231-WA0059.jpg" class="img-fluid rounded shadow-lg hover-effect"
-                  alt="Robotics Image 3">
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <img src="img/robotics/IMG-20241231-WA0061.jpg" class="img-fluid rounded shadow-lg hover-effect"
-                  alt="Robotics Image 3">
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <img src="img/robotics/IMG-20241231-WA0062.jpg" class="img-fluid rounded shadow-lg hover-effect"
-                  alt="Robotics Image 3">
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <img src="img/robotics/IMG-20241231-WA0063.jpg" class="img-fluid rounded shadow-lg hover-effect"
-                  alt="Robotics Image 3">
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <img src="img/robotics/IMG-20241231-WA0064.jpg" class="img-fluid rounded shadow-lg hover-effect"
-                  alt="Robotics Image 3">
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <img src="img/robotics/IMG-20241231-WA0065.jpg" class="img-fluid rounded shadow-lg hover-effect"
-                  alt="Robotics Image 3">
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <img src="img/robotics/IMG-20241231-WA0066.jpg" class="img-fluid rounded shadow-lg hover-effect"
-                  alt="Robotics Image 3">
-              </div>
-              <!-- Add more Robotics images here if needed -->
-            </div>
-          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
 
   <style>
-    /* Ensure consistent image height and transitions */
-    .accordion-body img {
+    .card {
+      max-width: 100%;
+      height: 100%;
+    }
+
+    .card-img-top {
       height: 200px;
       object-fit: cover;
+    }
+
+    .modal-body img {
+      height: 200px;
       width: 100%;
+      object-fit: cover;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    /* Hover effect for images */
-    .hover-effect:hover {
+    .modal-body img:hover {
       transform: scale(1.05);
-      /* Slight zoom effect */
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      /* Enhanced shadow on hover */
     }
   </style>
 
-  <!-- Gallery Section end -->
+  <script>
+    const galleryImages = {
+      unityHomes: [
+        "img\Unity Home header-1.jpg",
+        "img\Unity Home header-2.jpg"
+      ],
+      unityAcademy: [
+        "img/Unity-Academy-1.jpg"
+      ],
+      unityPhoolBun: [
+        "img/Unity-Phool-Bun-1.jpg",
+        "img/Unity-Phool-Bun-2.jpg"
+      ],
+      // Add more sections and images as needed
+    };
+
+    const galleryModal = document.getElementById('galleryModal');
+    const galleryContent = document.getElementById('galleryContent');
+
+    galleryModal.addEventListener('show.bs.modal', function (event) {
+      const button = event.relatedTarget;
+      const section = button.getAttribute('data-section');
+
+      galleryContent.innerHTML = '';
+
+      galleryImages[section].forEach((image) => {
+        const col = document.createElement('div');
+        col.classList.add('col-lg-3', 'col-md-4', 'col-sm-6');
+
+        const img = document.createElement('img');
+        img.src = image;
+        img.classList.add('img-fluid', 'rounded', 'shadow-sm');
+        img.alt = `${section} Image`;
+
+        col.appendChild(img);
+        galleryContent.appendChild(col);
+      });
+    });
+  </script>
+
   <!-- Footer Start -->
   <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
     <div class="container py-5">
