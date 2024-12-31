@@ -191,9 +191,10 @@
         class="absolute top-2 right-2 text-white bg-red-600 p-1 rounded-full hover:bg-red-400 transition-all">x</button>
 
       <!-- Image (constant on the left side) -->
-      <div class="w-40 h-40 border-4 border-blue-600 rounded-full overflow-hidden mr-6">
-        <img src="img/Eitbar.jpg" alt="President Image" class="w-full h-full object-cover">
+      <div class="w-64 h-auto border-4 border-blue-900 rounded-lg overflow-hidden mr-6">
+        <img src="img/faculty/president img.jpg" alt="President Image" class="w-full h-full object-contain">
       </div>
+
 
       <!-- Scrollable Text Content -->
       <div class="flex-1 overflow-y-auto text-left">
@@ -261,24 +262,24 @@
     function showPopup(popupId) {
       const popup = document.getElementById(popupId);
       const popupContent = popup.querySelector('[id^="popup-content"]');
-      popup.classList.remove('hidden');
+      popup.classList.remove('hidden'); // Ensure popup container is visible
       setTimeout(() => {
         popupContent.classList.remove('scale-0', 'opacity-0');
         popupContent.classList.add('scale-100', 'opacity-100');
-      }, 100);
+      }, 100); // Add a delay for smooth animation
     }
 
     // Function to close popup
     function closePopup(currentPopupId, nextPopupId = null) {
       const currentPopup = document.getElementById(currentPopupId);
       const popupContent = currentPopup.querySelector('[id^="popup-content"]');
-      popupContent.classList.add('scale-0', 'opacity-0');
+      popupContent.classList.add('scale-0', 'opacity-0'); // Close animation
       setTimeout(() => {
-        currentPopup.classList.add('hidden');
+        currentPopup.classList.add('hidden'); // Hide popup after animation ends
         if (nextPopupId) {
           setTimeout(() => {
-            showPopup(nextPopupId);
-          }, 2000); // Show next popup after 2 seconds
+            showPopup(nextPopupId); // Show next popup after 2 seconds
+          }, 2000);
         }
       }, 500);
     }
@@ -288,6 +289,7 @@
       showPopup('popup-card-1');
     }, 2000);
   </script>
+
 
 
   <!-- Carousel Start -->
