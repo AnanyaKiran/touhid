@@ -255,11 +255,11 @@
   <!-- Header End -->
 
   <!-- About Section -->
-  <div class="container py-5 bg-light rounded shadow-lg animate-fadeIn">
+  <div class="container py-5   animate-fadeIn">
     <div class="row g-5 align-items-center">
       <div class="row-lg-6">
-        <h2 class="section-title text-primary mb-4">How You Can Help Us?</h2>
-        <p class="text-muted justify-center">
+        <h2 class="section-title text-primary mb-4">How You Can Help Us</h2>
+        <p class="text-muted text-center">
           Our Mother’s Home and Qudsia Banu Unity Women’s Home run 100% on charity from the support of family, friends,
           and well-wishers. <br>Fees for children from economically challenged backgrounds are subsidized. This cost is
           borne
@@ -366,84 +366,80 @@
     }
   </style>
 
-  <div class="container py-5 bg-light rounded animate-fadeIn">
+  <div class="container py-5  rounded animate-fadeIn">
     <h2 class="text-center section-title mb-4 text-primary">Our Certificates</h2>
 
-    <!-- Carousel Start -->
-    <div id="carouselId" class="carousel slide carousel-fade relative" data-bs-ride="carousel" data-bs-interval="3000"
-      data-bs-pause="false">
-      <div class="carousel-inner relative w-full overflow-hidden">
-        <!-- Certificate 1 -->
-        <div class="carousel-item active w-full">
-          <img src="img/certificates/Group 3.jpg" class="carousel-image" alt="Certificate 1">
-        </div>
-        <!-- Certificate 2 -->
-        <div class="carousel-item w-full">
-          <img src="img/certificates/FCRA Registration 1.jpg" class="carousel-image" alt="Certificate 2">
-        </div>
-        <!-- Certificate 3 -->
-        <div class="carousel-item w-full">
-          <img src="img/certificates/FCRA Registration 2.jpg" class="carousel-image" alt="Certificate 3">
-        </div>
-      </div>
-    </div>
+    <!-- Owl Carousel Section -->
+<div class="owl-carousel owl-theme">
+  <!-- Certificate 1 -->
+  <div class="item">
+    <img src="img/certificates/FCRA Registration-1.jpg" alt="Certificate 1" class="carousel-image">
   </div>
+  <!-- Certificate 2 -->
+  <div class="item">
+    <img src="img/certificates/FCRA Registration-2.jpg" alt="Certificate 2" class="carousel-image">
+  </div>
+  <!-- Certificate 3 -->
+  <div class="item">
+    <img src="img/certificates/Approval Letter for form CSR1_page-0001.jpg" alt="Certificate 3" class="carousel-image">
+  </div>
+  <!-- Certificate 4 -->
+  <div class="item">
+    <img src="img/certificates/80G (2).jpg" alt="Certificate 4" class="carousel-image">
+  </div>
+</div>
 
-  <style>
-    /* Container and Section Styling */
-    .section-title {
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 20px;
-      color: #007bff;
-    }
+<!-- Add Owl Carousel CSS and JS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-    /* Carousel Styling */
-    .carousel {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .carousel-inner {
-      width: 100%;
-      display: flex;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .carousel-item {
-      flex: 0 0 100%;
-      display: block;
-      transition: transform 0.5s ease;
-    }
-
-    /* Center the images and ensure proper aspect ratio */
-    .carousel-image {
-      max-width: 100%;
-      max-height: 400px;
-      margin: 0 auto;
-      object-fit: contain;
-      /* Keeps aspect ratio intact */
-      display: block;
-    }
-
-    /* Optional Fade-In Effect */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
+<script>
+  $(document).ready(function () {
+    $(".owl-carousel").owlCarousel({
+      items: 2, // Number of items displayed at a time
+      loop: true, // Infinite loop
+      margin: 10, // Space between items
+      autoplay: true, // Enable auto-play
+      autoplayTimeout: 5000, // Slide interval in milliseconds
+      autoplayHoverPause: false, // Do not pause on hover
+      dots: false, // Remove navigation dots
+      nav: false, // Remove next and previous buttons
+      responsive: {
+        0: {
+          items: 1, // One item for small screens
+        },
+        768: {
+          items: 2, // Two items for larger screens
+        }
       }
+    });
+  });
+</script>
 
-      to {
-        opacity: 1;
-      }
-    }
+<style>
+  /* Image Styling */
+  .carousel-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
 
-    .animate-fadeIn {
-      animation: fadeIn 0.5s ease-in-out;
-    }
-  </style>
+  /* Owl Carousel Styling */
+  .owl-carousel .item {
+    text-align: center;
+  }
+
+  .owl-carousel .owl-stage {
+    display: flex;
+    align-items: center;
+  }
+</style>
+  </div>
+  
 
 
 
