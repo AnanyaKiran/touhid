@@ -180,144 +180,116 @@
     </nav>
   </div>
   <!-- Navbar & Hero End -->
-  <div id="popup-card"
+  <!-- Popup 1 -->
+  <div id="popup-card-1"
     class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50 backdrop-blur-sm">
-    <div id="popup-content"
+    <div id="popup-content-1"
       class="bg-gradient-to-r from-blue-50 via-blue-200 to-blue-50 rounded-lg shadow-md p-8 w-5/6 h-4/6 flex relative scale-0 opacity-0 transform transition-all duration-500">
 
       <!-- Close Button -->
-      <button onclick="closePopup()"
-        class="absolute top-2 right-2 text-white bg-red-600 p-1 rounded-full hover:bg-red-400 transition-all">
-        x
-      </button>
+      <button onclick="closePopup('popup-card-1', 'popup-card-2')"
+        class="absolute top-2 right-2 text-white bg-red-600 p-1 rounded-full hover:bg-red-400 transition-all">x</button>
 
-      <!-- Image card (constant on the left side) -->
+      <!-- Image (constant on the left side) -->
       <div class="w-40 h-40 border-4 border-blue-600 rounded-full overflow-hidden mr-6">
         <img src="img/Eitbar.jpg" alt="President Image" class="w-full h-full object-cover">
       </div>
 
-      <!-- Scrollable Text content on the right side -->
+      <!-- Scrollable Text Content -->
       <div class="flex-1 overflow-y-auto text-left">
-        <h2 class="text-3xl font-bold text-blue-950 text-bold mb-4">Our President's Message</h2>
-        <p class="text-blue-900 mb-4 text-sm italic">
-          “Welcome! We are delighted to invite you to explore our Group of Institutions and participate in our journey
-          of nurturing young minds and shaping their future. We firmly believe, that “No child should be deprived of
-          receiving education due to lack of funds and resources.”
-        </p>
+        <h2 class="text-3xl font-bold text-blue-950 mb-4">Our President's Message</h2>
+        <p class="text-blue-900 mb-4 text-sm italic">“Welcome! We are delighted to invite you to explore our Group of
+          Institutions and participate in our journey of nurturing young minds and shaping their future. We firmly
+          believe, that 'No child should be deprived of receiving education due to lack of funds and resources.'”</p>
         <p class="text-blue-900 text-sm mb-6">
-          I am privileged to share our Story, how from a tiny sapling, our Unity Group of Institutions have grown into a
+          I am privileged to share our story, how from a tiny sapling, our Unity Group of Institutions have grown into a
           mighty tree. Sky is the limit for us, and we aspire to further grow! In June of 1953, when Rahimkhan Unity
           High School (RUHS) was founded by my late father, Rahimkhan Omerkhan, I was only 12 years old and its first
-          student. Since then, I have watched its growth,  its trials and turbulations, its success and failures from
-          the closest quarters, our own home. My Mother stood by my father’s every move and provided unquestionable
-          support. The School Staff and its teachers, despite numerous difficulties stood strong by their Founder.
-          Others often considered it to be a sinking ship, kept themselves aloof to save themselves from ruination. Such
-          situations did not deter my father from further development till it was a complete High School from Nursery
-          (Kindergarten) to Std XI, later termed as SSLC. Today, we are spread across 8 institutions, we offer courses
-          from Kindergarten to Degree College.
+          student. Since then, I have watched its growth, its trials and tribulations, its success and failures from the
+          closest quarters, our own home. My mother stood by my father’s every move and provided unquestionable support.
         </p>
         <p class="text-blue-900 mb-4 text-sm">
           In 1977, upon the sad demise of my mother, my father sheltered a poor family of five in his own home and
-          looked after their every need, without any outside support.  As the number of children grew, my father had the
-          vision to realise that the support from family may not be lasting for ever, due to fluctuations and vagaries
-          of life, and hence decided to take these children under the umbrella of Touhid Education Society (TES). We
-          named it as Mother's Home, inspired by the well-known similar Home in Mumbai known as 'Baap nu ghar' (Father's
+          looked after their every need, without any outside support. As the number of children grew, my father had the
+          vision to realize that the support from family may not be lasting forever, due to fluctuations and vagaries of
+          life, and hence decided to take these children under the umbrella of Touhid Education Society (TES). We named
+          it as Mother's Home, inspired by the well-known similar home in Mumbai known as 'Baap nu ghar' (Father's
           Home).
         </p>
         <p class="text-blue-900 mb-4 text-sm">
           Mother's Home initially had about 50 girls, but 13 of them had to be excluded owing to the Department's strict
           regulations. Thus, Qudsia Banu Unity Women's Home was born. Today, this is a 2-storeyed building with 83
-          under-privileged girls. All 120 girls in both Home’s are provided with full amenities and are enrolled in the
-          Unity Group of Institutions. We have ambitious plans to start new courses such as Degree in Business
-          Management, Banking, Public Speaking and Personality Development, Vocational Training for Technical Trades,
-          and also pursue our application for introducing NCC Training. We also plan to upgrade our existing
-          infrastructure and facilities. After a long innings of 39 years as President of TES and its Unity Group of
-          Institutions, I have stepped down, making way for Vice-President, Dr. Fazila Patankar, to take over as the new
-          President. With over 17 years of experience in Public Health, I am confident that She, along with  TES
-          Management, will deal squarely with all the challenges and further elevate the status of our Institutions to
-          make them the most sought-after in the City of Karwar.<br> <b>-Etibar Shah R Khan President Emeritus</b>
+          under-privileged girls. All 120 girls in both homes are provided with full amenities and are enrolled in the
+          Unity Group of Institutions.
+        </p>
+        <p class="text-blue-900 mb-4 text-sm">
+          After a long innings of 39 years as President of TES and its Unity Group of Institutions, I have stepped down,
+          making way for Vice-President, Dr. Fazila Patankar, to take over as the new President. With over 17 years of
+          experience in Public Health, I am confident that she, along with TES Management, will deal squarely with all
+          the challenges and further elevate the status of our Institutions to make them the most sought-after in the
+          City of Karwar.<br><b>- Etibar Shah R Khan, President Emeritus</b>
         </p>
       </div>
     </div>
   </div>
 
-  <script>
-    // Show the popup after 10 seconds
-    setTimeout(() => {
-      const popup = document.getElementById('popup-card');
-      const popupContent = document.getElementById('popup-content');
-
-      // Show the overlay and animate the popup
-      popup.classList.remove('hidden');
-      setTimeout(() => {
-        popupContent.classList.remove('scale-0', 'opacity-0');
-        popupContent.classList.add('scale-100', 'opacity-100');
-      }, 100); // Small delay for animation to sync
-    }, 2000); // 5,000ms = 5 seconds
-
-    // Close popup function
-    function closePopup() {
-      const popup = document.getElementById('popup-card');
-      const popupContent = document.getElementById('popup-content');
-
-      // Hide the popup with animation
-      popupContent.classList.add('scale-0', 'opacity-0');
-      setTimeout(() => {
-        popup.classList.add('hidden');
-      }, 500); // Wait for animation to finish
-    }
-  </script>
-
-
-  <div id="popup-card"
+  <!-- Popup 2 -->
+  <div id="popup-card-2"
     class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50 backdrop-blur-sm">
-    <div id="popup-content"
+    <div id="popup-content-2"
       class="bg-gradient-to-r from-blue-50 via-blue-200 to-blue-50 rounded-lg shadow-md p-8 w-96 text-center relative scale-0 opacity-0 transform transition-all duration-500">
-      <h2 class="text-3xl font-bold text-blue-950 text-bold mb-4">Help Us Grow!</h2>
-      <p class="text-blue-900 mb-4 italic">
-        <strong>“Children are the world’s most valuable resource and its best hope for the future.”</strong>
-      </p>
-      <p class="text-blue-900 mb-6">
-        <strong>Your generous contribution helps us provide better educational opportunities to those in need. Together,
-          we can
-          change lives.</strong>
-      </p>
+
+      <!-- Close Button -->
+      <button onclick="closePopup('popup-card-2')"
+        class="absolute top-2 right-2 text-white bg-red-600 p-1 rounded-full hover:bg-red-400 transition-all">x</button>
+
+      <!-- Content -->
+      <h2 class="text-3xl font-bold text-blue-950 mb-4">Help Us Grow!</h2>
+      <p class="text-blue-900 mb-4 italic">“Children are the world’s most valuable resource and its best hope for the
+        future.”</p>
+      <p class="text-blue-900 mb-6">Your generous contribution helps us provide better educational opportunities to
+        those in need. Together, we can change lives.</p>
       <a href="/donate.html"
-        class="inline-block px-6 py-2 text-white font-bold bg-red-500 rounded-lg shadow-md hover:bg-red-400 transition">
-        Donate Now
-      </a>
-      <button class="absolute top-2 right-2 text-black text-bold hover:text-gray-950" onclick="closePopup()">
-        &#x2715;
-      </button>
+        class="inline-block px-6 py-2 text-white font-bold bg-red-500 rounded-lg shadow-md hover:bg-red-400 transition">Donate
+        Now</a>
     </div>
   </div>
-  <script>
-    // Show the popup after 10 seconds
-    setTimeout(() => {
-      const popup = document.getElementById('popup-card');
-      const popupContent = document.getElementById('popup-content');
 
-      // Show the overlay and animate the popup
+  <!-- JavaScript -->
+  <script>
+    // Function to show popup
+    function showPopup(popupId) {
+      const popup = document.getElementById(popupId);
+      const popupContent = popup.querySelector('[id^="popup-content"]');
       popup.classList.remove('hidden');
       setTimeout(() => {
         popupContent.classList.remove('scale-0', 'opacity-0');
         popupContent.classList.add('scale-100', 'opacity-100');
-      }, 100); // Small delay for animation to sync
-    }, 15000); // 5,000ms = 5 seconds
-
-    // Close popup function
-    function closePopup() {
-      const popup = document.getElementById('popup-card');
-      const popupContent = document.getElementById('popup-content');
-
-      // Hide the popup with animation
-      popupContent.classList.add('scale-0', 'opacity-0');
-      setTimeout(() => {
-        popup.classList.add('hidden');
-      }, 500); // Wait for animation to finish
+      }, 100);
     }
 
+    // Function to close popup
+    function closePopup(currentPopupId, nextPopupId = null) {
+      const currentPopup = document.getElementById(currentPopupId);
+      const popupContent = currentPopup.querySelector('[id^="popup-content"]');
+      popupContent.classList.add('scale-0', 'opacity-0');
+      setTimeout(() => {
+        currentPopup.classList.add('hidden');
+        if (nextPopupId) {
+          setTimeout(() => {
+            showPopup(nextPopupId);
+          }, 2000); // Show next popup after 2 seconds
+        }
+      }, 500);
+    }
+
+    // Show the first popup after 2 seconds
+    setTimeout(() => {
+      showPopup('popup-card-1');
+    }, 2000);
   </script>
+
+
   <!-- Carousel Start -->
   <div class="carousel-header">
     <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
