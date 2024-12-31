@@ -26,7 +26,6 @@
   <!-- Customized Bootstrap Stylesheet -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
 
-  <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Template Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
@@ -256,22 +255,21 @@
   <!-- Header End -->
 
   <!-- About Section -->
-  <!-- About Section -->
-  <div class="container py-5 animate-fadeIn">
-    <div class="row justify-center g-5 ">
-      <div class="col-lg-6">
-        <h2 class="section-title text-primary mb-4 text-bold text-2xl"><strong>How You Can Help Us?</strong></h2>
-        <p class="text-center text-black">
+  <div class="container py-5 bg-light rounded shadow-lg animate-fadeIn">
+    <div class="row g-5 align-items-center">
+      <div class="row-lg-6">
+        <h2 class="section-title text-primary mb-4">How You Can Help Us?</h2>
+        <p class="text-muted justify-center">
           Our Mother’s Home and Qudsia Banu Unity Women’s Home run 100% on charity from the support of family, friends,
           and well-wishers. <br>Fees for children from economically challenged backgrounds are subsidized. This cost is
           borne
-          by our generous donors.<br><b>Your HELP and SUPPORT will help change a LIFE.</b><br> Donations can be made in
-          the following ways:
+          by our generous donors.<br><b>Your HELP and SUPPORT will help change a LIFE.</b><br>Donations can be made in
+          the following
+          ways:
         </p>
       </div>
     </div>
   </div>
-
 
   <!-- Donation Section -->
   <div class="container py-5" id="donation-section">
@@ -368,32 +366,85 @@
     }
   </style>
 
-  <div class="container py-5  rounded animate-fadeIn">
-    <h2 class="text-center section-title mb-4 text-primary text-3xl text-bold"><strong>Our Certificates</strong></h2>
+  <div class="container py-5 bg-light rounded animate-fadeIn">
+    <h2 class="text-center section-title mb-4 text-primary">Our Certificates</h2>
 
     <!-- Carousel Start -->
     <div id="carouselId" class="carousel slide carousel-fade relative" data-bs-ride="carousel" data-bs-interval="3000"
       data-bs-pause="false">
       <div class="carousel-inner relative w-full overflow-hidden">
         <!-- Certificate 1 -->
-        <div class="carousel-item active float-left w-full">
-          <img src="img/certificates/Group 3.jpg" class="w-auto max-h-[400px] mx-auto object-contain"
-            alt="Certificate 1">
+        <div class="carousel-item active w-full">
+          <img src="img/certificates/Group 3.jpg" class="carousel-image" alt="Certificate 1">
         </div>
         <!-- Certificate 2 -->
-        <div class="carousel-item float-left w-full">
-          <img src="img/certificates/FCRA Registration 1.jpg" class="w-auto max-h-[350px] mx-auto object-contain"
-            alt="Certificate 2">
+        <div class="carousel-item w-full">
+          <img src="img/certificates/FCRA Registration 1.jpg" class="carousel-image" alt="Certificate 2">
         </div>
         <!-- Certificate 3 -->
-        <div class="carousel-item float-left w-full">
-          <img src="img/certificates/FCRA Registration 2.jpg" class="w-auto max-h-[350px] mx-auto object-contain"
-            alt="Certificate 3">
+        <div class="carousel-item w-full">
+          <img src="img/certificates/FCRA Registration 2.jpg" class="carousel-image" alt="Certificate 3">
         </div>
       </div>
     </div>
   </div>
-  <!-- Carousel End -->
+
+  <style>
+    /* Container and Section Styling */
+    .section-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+
+    /* Carousel Styling */
+    .carousel {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .carousel-inner {
+      width: 100%;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carousel-item {
+      flex: 0 0 100%;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    /* Center the images and ensure proper aspect ratio */
+    .carousel-image {
+      max-width: 100%;
+      max-height: 400px;
+      margin: 0 auto;
+      object-fit: contain;
+      /* Keeps aspect ratio intact */
+      display: block;
+    }
+
+    /* Optional Fade-In Effect */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .animate-fadeIn {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+  </style>
+
 
 
 
