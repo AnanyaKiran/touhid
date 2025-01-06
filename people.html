@@ -136,8 +136,15 @@
           <li class="nav-item">
             <a href="./Facilities.html" class="nav-link">Facilities</a>
           </li>
-          <li class="nav-item">
-            <a href="Gallery.html" class="nav-link">Gallery</a>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="galleryDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Gallery
+            </a>
+            <ul class="dropdown-menu m-0" aria-labelledby="galleryDropdown">
+              <li><a href="./Gallery.html" class="dropdown-item">Photo Gallery</a></li>
+              <li><a href="./video_gallery.html" class="dropdown-item">Video Gallery</a></li>
+            </ul>
           </li>
           <!-- CTA Button -->
           <li class="nav-item ms-lg-3">
@@ -245,6 +252,12 @@
       </div>
       <div class="text-center">
         <div class="faculty-image">
+          <img src="img/Haji.jpg" alt="Faculty Member" class="faculty-img">
+        </div>
+        <p class="faculty-details">Haji Mohammed <br>Hussain, Treasurer</p>
+      </div>
+      <div class="text-center">
+        <div class="faculty-image">
           <img src="img/Arif.jpg" alt="Faculty Member" class="faculty-img">
         </div>
         <p class="faculty-details">Mr. Arif Rizwan<br> Abdullah Shaikh, <br>General Secretary</p>
@@ -254,12 +267,6 @@
           <img src="img/Rehana.jpg" alt="Faculty Member" class="faculty-img">
         </div>
         <p class="faculty-details">Mrs. Rehana Etibar<br>Shah Khan</p>
-      </div>
-      <div class="text-center">
-        <div class="faculty-image">
-          <img src="img/Haji.jpg" alt="Faculty Member" class="faculty-img">
-        </div>
-        <p class="faculty-details">Haji Mohammed <br>Hussain, Treasurer</p>
       </div>
       <div class="text-center">
         <div class="faculty-image">
@@ -350,6 +357,7 @@
   </div>
 
   <!-- CSS -->
+  <!-- CSS -->
   <style>
     .container {
       width: 90%;
@@ -359,7 +367,7 @@
 
     .people-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       justify-items: center;
     }
@@ -391,6 +399,44 @@
       font-weight: bold;
       color: #4a4a4a;
     }
+
+    /* Responsive styles */
+    @media (max-width: 1024px) {
+      .people-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .people-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .faculty-image {
+        width: 120px;
+        height: 120px;
+      }
+
+      .faculty-details {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .people-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .faculty-image {
+        width: 100px;
+        height: 100px;
+      }
+
+      .faculty-details {
+        font-size: 12px;
+      }
+    }
+  </style>
   </style>
   <!-- People Section end -->
 
