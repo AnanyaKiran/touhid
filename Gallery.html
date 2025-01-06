@@ -134,8 +134,15 @@
           <li class="nav-item">
             <a href="./Facilities.html" class="nav-link">Facilities</a>
           </li>
-          <li class="nav-item">
-            <a href="Gallery.html" class="nav-link active">Gallery</a>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="galleryDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Gallery
+            </a>
+            <ul class="dropdown-menu m-0" aria-labelledby="galleryDropdown">
+              <li><a href="./Gallery.html" class="dropdown-item">Photo Gallery</a></li>
+              <li><a href="./video_gallery.html" class="dropdown-item">Video Gallery</a></li>
+            </ul>
           </li>
           <!-- CTA Button -->
           <li class="nav-item ms-lg-3">
@@ -215,195 +222,195 @@
 
 
   <!-- Gallery Section -->
-<div class="container py-5 bg-gray-100">
-  <!-- Gallery Cards -->
-  <div class="row g-4">
-    <!-- Robotics -->
-    <div class="col-lg-3 col-md-4 col-sm-6">
-      <div class="card shadow-sm h-100">
-        <img src="img/robotics/IMG-20241231-WA0054.jpg" class="card-img-top" alt="Robotics Cover">
-        <div class="card-body text-center">
-          <h5 class="card-title">Robotics</h5>
-          <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
-            data-section="robotics">View Gallery</button>
+  <div class="container py-5 bg-gray-100">
+    <!-- Gallery Cards -->
+    <div class="row g-4">
+      <!-- Robotics -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card shadow-sm h-100">
+          <img src="img/robotics/IMG-20241231-WA0054.jpg" class="card-img-top" alt="Robotics Cover">
+          <div class="card-body text-center">
+            <h5 class="card-title">Robotics</h5>
+            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
+              data-section="robotics">View Gallery</button>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- RUHS Exhibition -->
-    <div class="col-lg-3 col-md-4 col-sm-6">
-      <div class="card shadow-sm h-100">
-        <img src="img/RHS-5.jpg" class="card-img-top" alt="RHS Exhibition Cover">
-        <div class="card-body text-center">
-          <h5 class="card-title">Chandrayaan - 3 Science Exhibition at RUHS</h5>
-          <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
-            data-section="rhsExhibition">View Gallery</button>
+      <!-- RUHS Exhibition -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card shadow-sm h-100">
+          <img src="img/RHS-5.jpg" class="card-img-top" alt="RHS Exhibition Cover">
+          <div class="card-body text-center">
+            <h5 class="card-title">Chandrayaan - 3 Science Exhibition at RUHS</h5>
+            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
+              data-section="rhsExhibition">View Gallery</button>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- Unity Blooming Dale -->
-    <div class="col-lg-3 col-md-4 col-sm-6">
-      <div class="card shadow-sm h-100">
-        <img src="img/bloomingdale bg.jpg" class="card-img-top" alt="Unity Bloomingdale Cover">
-        <div class="card-body text-center">
-          <h5 class="card-title">Science Exhibition at UBDS</h5>
-          <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
-            data-section="ubdcExhibition">View Gallery</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Gallery Modal -->
-<div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="galleryModalLabel">Gallery</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="row g-3" id="galleryContent">
-          <!-- Images will be dynamically injected here -->
+      <!-- Unity Blooming Dale -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card shadow-sm h-100">
+          <img src="img/bloomingdale bg.jpg" class="card-img-top" alt="Unity Bloomingdale Cover">
+          <div class="card-body text-center">
+            <h5 class="card-title">Science Exhibition at UBDS</h5>
+            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
+              data-section="ubdcExhibition">View Gallery</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<script>
-  const galleryImages = {
+  <!-- Gallery Modal -->
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="galleryModalLabel">Gallery</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3" id="galleryContent">
+            <!-- Images will be dynamically injected here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    robotics: [
-      "img/robotics/IMG-20241231-WA0054.jpg",
-      "img/robotics/IMG-20241231-WA0055.jpg",
-      "img/robotics/IMG-20241231-WA0056.jpg",
-      "img/robotics/IMG-20241231-WA0057.jpg",
-      "img/robotics/IMG-20241231-WA0058.jpg",
-      "img/robotics/IMG-20241231-WA0059.jpg",
-      "img/robotics/IMG-20241231-WA0061.jpg",
-      "img/robotics/IMG-20241231-WA0062.jpg",
-      "img/robotics/IMG-20241231-WA0063.jpg",
-      "img/robotics/IMG-20241231-WA0064.jpg",
-      "img/robotics/IMG-20241231-WA0065.jpg",
-      "img/robotics/IMG-20241231-WA0066.jpg",
-    ],
+  <script>
+    const galleryImages = {
 
-    rhsExhibition: [
-"img/ruhs/IMG-20241231-WA0032.jpg",
-"img/ruhs/IMG-20241231-WA0033.jpg",
-"img/ruhs/IMG-20241231-WA0034.jpg",
-"img/ruhs/IMG-20241231-WA0035.jpg",
-"img/ruhs/IMG-20241231-WA0036.jpg",
-"img/ruhs/IMG-20241231-WA0037.jpg",
-"img/ruhs/IMG-20241231-WA0038.jpg",
-"img/ruhs/IMG-20241231-WA0039.jpg",
-"img/ruhs/IMG-20241231-WA0040.jpg",
-"img/ruhs/IMG-20241231-WA0041.jpg",
-"img/ruhs/IMG-20241231-WA0042.jpg",
-"img/ruhs/IMG-20241231-WA0043.jpg",
-"img/ruhs/IMG-20241231-WA0044.jpg",
-"img/ruhs/IMG-20241231-WA0045.jpg",
-"img/ruhs/IMG-20241231-WA0046.jpg",
-"img/ruhs/IMG-20241231-WA0047.jpg",
-"img/ruhs/IMG-20241231-WA0048.jpg",
-"img/ruhs/IMG-20241231-WA0049.jpg",
-"img/ruhs/IMG-20241231-WA0050.jpg",
-"img/ruhs/IMG-20241231-WA0051.jpg",
-"img/ruhs/IMG-20241231-WA0052.jpg",
-"img/ruhs/IMG-20241231-WA0053.jpg",
-"img/ruhs/IMG-20241231-WA0054.jpg",],
+      robotics: [
+        "img/robotics/IMG-20241231-WA0054.jpg",
+        "img/robotics/IMG-20241231-WA0055.jpg",
+        "img/robotics/IMG-20241231-WA0056.jpg",
+        "img/robotics/IMG-20241231-WA0057.jpg",
+        "img/robotics/IMG-20241231-WA0058.jpg",
+        "img/robotics/IMG-20241231-WA0059.jpg",
+        "img/robotics/IMG-20241231-WA0061.jpg",
+        "img/robotics/IMG-20241231-WA0062.jpg",
+        "img/robotics/IMG-20241231-WA0063.jpg",
+        "img/robotics/IMG-20241231-WA0064.jpg",
+        "img/robotics/IMG-20241231-WA0065.jpg",
+        "img/robotics/IMG-20241231-WA0066.jpg",
+      ],
+
+      rhsExhibition: [
+        "img/ruhs/IMG-20241231-WA0032.jpg",
+        "img/ruhs/IMG-20241231-WA0033.jpg",
+        "img/ruhs/IMG-20241231-WA0034.jpg",
+        "img/ruhs/IMG-20241231-WA0035.jpg",
+        "img/ruhs/IMG-20241231-WA0036.jpg",
+        "img/ruhs/IMG-20241231-WA0037.jpg",
+        "img/ruhs/IMG-20241231-WA0038.jpg",
+        "img/ruhs/IMG-20241231-WA0039.jpg",
+        "img/ruhs/IMG-20241231-WA0040.jpg",
+        "img/ruhs/IMG-20241231-WA0041.jpg",
+        "img/ruhs/IMG-20241231-WA0042.jpg",
+        "img/ruhs/IMG-20241231-WA0043.jpg",
+        "img/ruhs/IMG-20241231-WA0044.jpg",
+        "img/ruhs/IMG-20241231-WA0045.jpg",
+        "img/ruhs/IMG-20241231-WA0046.jpg",
+        "img/ruhs/IMG-20241231-WA0047.jpg",
+        "img/ruhs/IMG-20241231-WA0048.jpg",
+        "img/ruhs/IMG-20241231-WA0049.jpg",
+        "img/ruhs/IMG-20241231-WA0050.jpg",
+        "img/ruhs/IMG-20241231-WA0051.jpg",
+        "img/ruhs/IMG-20241231-WA0052.jpg",
+        "img/ruhs/IMG-20241231-WA0053.jpg",
+        "img/ruhs/IMG-20241231-WA0054.jpg",],
 
 
-ubdcExhibition: [
-  "img/ubds/IMG-20241231-WA0056.jpg",
-  "img/ubds/IMG-20241231-WA0055.jpg",
-  "img/ubds/IMG-20241231-WA0057.jpg",
-  "img/ubds/IMG-20241231-WA0058.jpg",
-  "img/ubds/IMG-20241231-WA0059.jpg",
-  "img/ubds/IMG-20241231-WA0060.jpg",
-  "img/ubds/IMG-20241231-WA0061.jpg",
-  "img/ubds/IMG-20241231-WA0062.jpg",
-  "img/ubds/IMG-20241231-WA0063.jpg",
-  "img/ubds/IMG-20241231-WA0064.jpg",
-  "img/ubds/IMG-20241231-WA0065.jpg",
-  "img/ubds/IMG-20241231-WA0066.jpg",
-  "img/ubds/IMG-20241231-WA0067.jpg",
-  "img/ubds/IMG-20241231-WA0068.jpg",
-  "img/ubds/IMG-20241231-WA0069.jpg",
-  "img/ubds/IMG-20241231-WA0070.jpg",
-  "img/ubds/IMG-20241231-WA0071.jpg",
-  "img/ubds/IMG-20241231-WA0072.jpg",
-  "img/ubds/IMG-20241231-WA0073.jpg",
-  "img/ubds/IMG-20241231-WA0074.jpg",
-  "img/ubds/IMG-20241231-WA0075.jpg",
-  "img/ubds/IMG-20241231-WA0076.jpg",
-  "img/ubds/IMG-20241231-WA0077.jpg",
-  "img/ubds/IMG-20241231-WA0078.jpg",
-  "img/ubds/IMG-20241231-WA0079.jpg",
-  "img/ubds/IMG-20241231-WA0080.jpg",
-  "img/ubds/IMG-20241231-WA0081.jpg",
-  "img/ubds/IMG-20241231-WA0082.jpg",
-  "img/ubds/IMG-20241231-WA0083.jpg",
-  "img/ubds/IMG-20241231-WA0084.jpg",
-  "img/ubds/IMG-20241231-WA0085.jpg",
-],
-  
-  };
+      ubdcExhibition: [
+        "img/ubds/IMG-20241231-WA0056.jpg",
+        "img/ubds/IMG-20241231-WA0055.jpg",
+        "img/ubds/IMG-20241231-WA0057.jpg",
+        "img/ubds/IMG-20241231-WA0058.jpg",
+        "img/ubds/IMG-20241231-WA0059.jpg",
+        "img/ubds/IMG-20241231-WA0060.jpg",
+        "img/ubds/IMG-20241231-WA0061.jpg",
+        "img/ubds/IMG-20241231-WA0062.jpg",
+        "img/ubds/IMG-20241231-WA0063.jpg",
+        "img/ubds/IMG-20241231-WA0064.jpg",
+        "img/ubds/IMG-20241231-WA0065.jpg",
+        "img/ubds/IMG-20241231-WA0066.jpg",
+        "img/ubds/IMG-20241231-WA0067.jpg",
+        "img/ubds/IMG-20241231-WA0068.jpg",
+        "img/ubds/IMG-20241231-WA0069.jpg",
+        "img/ubds/IMG-20241231-WA0070.jpg",
+        "img/ubds/IMG-20241231-WA0071.jpg",
+        "img/ubds/IMG-20241231-WA0072.jpg",
+        "img/ubds/IMG-20241231-WA0073.jpg",
+        "img/ubds/IMG-20241231-WA0074.jpg",
+        "img/ubds/IMG-20241231-WA0075.jpg",
+        "img/ubds/IMG-20241231-WA0076.jpg",
+        "img/ubds/IMG-20241231-WA0077.jpg",
+        "img/ubds/IMG-20241231-WA0078.jpg",
+        "img/ubds/IMG-20241231-WA0079.jpg",
+        "img/ubds/IMG-20241231-WA0080.jpg",
+        "img/ubds/IMG-20241231-WA0081.jpg",
+        "img/ubds/IMG-20241231-WA0082.jpg",
+        "img/ubds/IMG-20241231-WA0083.jpg",
+        "img/ubds/IMG-20241231-WA0084.jpg",
+        "img/ubds/IMG-20241231-WA0085.jpg",
+      ],
 
-  const galleryModal = document.getElementById("galleryModal");
-  const galleryContent = document.getElementById("galleryContent");
+    };
 
-  galleryModal.addEventListener("show.bs.modal", function (event) {
-    const button = event.relatedTarget;
-    const section = button.getAttribute("data-section");
-    console.log(`Gallery section triggered: ${section}`);
+    const galleryModal = document.getElementById("galleryModal");
+    const galleryContent = document.getElementById("galleryContent");
 
-    galleryContent.innerHTML = ""; // Clear previous content
+    galleryModal.addEventListener("show.bs.modal", function (event) {
+      const button = event.relatedTarget;
+      const section = button.getAttribute("data-section");
+      console.log(`Gallery section triggered: ${section}`);
 
-    if (galleryImages[section]) {
-      galleryImages[section].forEach((image) => {
-        console.log(`Adding image: ${image}`);
-        const col = document.createElement("div");
-        col.classList.add("col-lg-3", "col-md-4", "col-sm-6");
+      galleryContent.innerHTML = ""; // Clear previous content
 
-        const img = document.createElement("img");
-        img.src = image;
-        img.classList.add("img-fluid", "rounded", "shadow-sm");
-        img.alt = `${section} Image`;
+      if (galleryImages[section]) {
+        galleryImages[section].forEach((image) => {
+          console.log(`Adding image: ${image}`);
+          const col = document.createElement("div");
+          col.classList.add("col-lg-3", "col-md-4", "col-sm-6");
 
-        col.appendChild(img);
-        galleryContent.appendChild(col);
-      });
-    } else {
-      console.error(`No images found for section: ${section}`);
+          const img = document.createElement("img");
+          img.src = image;
+          img.classList.add("img-fluid", "rounded", "shadow-sm");
+          img.alt = `${section} Image`;
+
+          col.appendChild(img);
+          galleryContent.appendChild(col);
+        });
+      } else {
+        console.error(`No images found for section: ${section}`);
+      }
+    });
+  </script>
+
+  <style>
+    .card {
+      max-width: 100%;
+      height: 100%;
     }
-  });
-</script>
 
-<style>
-  .card {
-    max-width: 100%;
-    height: 100%;
-  }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
 
-  .card-img-top {
-    height: 200px;
-    object-fit: cover;
-  }
+    .modal-body img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-  .modal-body img {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .modal-body img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-</style>
+    .modal-body img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 
 
 

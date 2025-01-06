@@ -134,48 +134,55 @@
           <li class="nav-item">
             <a href="./Facilities.html" class="nav-link">Facilities</a>
           </li>
-          <li class="nav-item">
-            <a href="Gallery.html" class="nav-link">Gallery</a>
-          </li>
-          <!-- CTA Button -->
-          <li class="nav-item ms-lg-3">
-            <a href="/help_us_grow.html" class="btn btn-flashy">
-              Help us grow!
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="institutionsDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Gallery
             </a>
-          </li>
-          <style>
-            .btn-flashy {
-              background: linear-gradient(45deg, #ff6a00, #ee0979);
-              color: black;
-              /* Ensures text is visible on default state */
-              font-weight: bold;
-              padding: 10px 20px;
-              border: none;
-              border-radius: 50px;
-              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-              text-transform: uppercase;
-              animation: glowing 1.5s infinite alternate;
-              transition: transform 0.2s ease-in-out, background 0.3s ease, color 0.3s ease;
-            }
+            <ul class="dropdown-menu m-0" aria-labelledby="institutionsDropdown">
+              <li><a href="./Gallery.html" class="dropdown-item">Photo Gallery</a></li>
+              <li><a href="./video_gallery.html" class="dropdown-item">Video Gallery</a>
+              </li>
+              </ul>
+              <!-- CTA Button -->
+              <li class="nav-item ms-lg-3">
+                <a href="/help_us_grow.html" class="btn btn-flashy">
+                  Help us grow!
+                </a>
+              </li>
+              <style>
+                .btn-flashy {
+                  background: linear-gradient(45deg, #ff6a00, #ee0979);
+                  color: black;
+                  /* Ensures text is visible on default state */
+                  font-weight: bold;
+                  padding: 10px 20px;
+                  border: none;
+                  border-radius: 50px;
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                  text-transform: uppercase;
+                  animation: glowing 1.5s infinite alternate;
+                  transition: transform 0.2s ease-in-out, background 0.3s ease, color 0.3s ease;
+                }
 
-            .btn-flashy:hover {
-              transform: scale(1.1);
-              background: linear-gradient(45deg, #ee0979, #ff6a00);
-              color: white;
-              /* Change text color to white for better contrast */
-            }
+                .btn-flashy:hover {
+                  transform: scale(1.1);
+                  background: linear-gradient(45deg, #ee0979, #ff6a00);
+                  color: white;
+                  /* Change text color to white for better contrast */
+                }
 
-            @keyframes glowing {
-              0% {
-                box-shadow: 0 0 5px #ff6a00, 0 0 10px #ee0979, 0 0 15px #ff6a00;
-              }
+                @keyframes glowing {
+                  0% {
+                    box-shadow: 0 0 5px #ff6a00, 0 0 10px #ee0979, 0 0 15px #ff6a00;
+                  }
 
-              100% {
-                box-shadow: 0 0 20px #ff6a00, 0 0 30px #ee0979, 0 0 40px #ff6a00;
-              }
-            }
-          </style>
-        </ul>
+                  100% {
+                    box-shadow: 0 0 20px #ff6a00, 0 0 30px #ee0979, 0 0 40px #ff6a00;
+                  }
+                }
+              </style>
+            </ul>
       </div>
     </nav>
   </div>
@@ -184,32 +191,33 @@
   <div id="popup-card-1"
     class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50 backdrop-blur-sm">
     <div id="popup-content-1"
-      class="bg-gradient-to-r from-blue-50 via-blue-200 to-blue-50 rounded-lg shadow-md p-8 w-5/6 h-4/6 flex relative scale-0 opacity-0 transform transition-all duration-500">
+      class="bg-gradient-to-r from-blue-50 via-blue-200 to-blue-50 rounded-lg shadow-md p-4 sm:p-8 w-5/6 h-4/6 flex flex-col sm:flex-row relative scale-0 opacity-0 transform transition-all duration-500">
 
       <!-- Close Button -->
       <button onclick="closePopup('popup-card-1', 'popup-card-2')"
         class="absolute top-2 right-2 text-white bg-red-600 p-1 rounded-full hover:bg-red-400 transition-all">x</button>
 
-      <!-- Image (constant on the left side) -->
-      <div class="w-64 h-auto border-4 border-blue-900 rounded-lg overflow-hidden mr-6">
-        <img src="img/faculty/president img.jpg" alt="President Image" class="w-full h-full object-contain">
+      <!-- Image (responsive size) -->
+      <div class="w-full sm:w-64 h-auto border-4 border-blue-900 rounded-lg overflow-hidden mb-4 sm:mb-0 sm:mr-6">
+        <img src="img/faculty/president img.jpg" alt="President Image" class="w-full h-48 sm:h-full object-contain">
       </div>
-
 
       <!-- Scrollable Text Content -->
       <div class="flex-1 overflow-y-auto text-left">
-        <h2 class="text-3xl font-bold text-blue-950 mb-4">Our President's Message</h2>
-        <p class="text-blue-900 mb-4 text-sm italic">“Welcome! We are delighted to invite you to explore our Group of
-          Institutions and participate in our journey of nurturing young minds and shaping their future. We firmly
-          believe, that 'No child should be deprived of receiving education due to lack of funds and resources.'”</p>
-        <p class="text-blue-900 text-sm mb-6">
+        <h2 class="text-2xl sm:text-3xl font-bold text-blue-950 mb-4">Our President Emeritus's Message</h2>
+        <p class="text-blue-900 mb-4 text-sm sm:text-base italic">
+          “Welcome! We are delighted to invite you to explore our Group of Institutions and participate in our journey
+          of nurturing young minds and shaping their future. We firmly believe, that 'No child should be deprived of
+          receiving education due to lack of funds and resources.'”
+        </p>
+        <p class="text-blue-900 text-sm sm:text-base mb-6">
           I am privileged to share our story, how from a tiny sapling, our Unity Group of Institutions have grown into a
           mighty tree. Sky is the limit for us, and we aspire to further grow! In June of 1953, when Rahimkhan Unity
           High School (RUHS) was founded by my late father, Rahimkhan Omerkhan, I was only 12 years old and its first
           student. Since then, I have watched its growth, its trials and tribulations, its success and failures from the
           closest quarters, our own home. My mother stood by my father’s every move and provided unquestionable support.
         </p>
-        <p class="text-blue-900 mb-4 text-sm">
+        <p class="text-blue-900 mb-4 text-sm sm:text-base">
           In 1977, upon the sad demise of my mother, my father sheltered a poor family of five in his own home and
           looked after their every need, without any outside support. As the number of children grew, my father had the
           vision to realize that the support from family may not be lasting forever, due to fluctuations and vagaries of
@@ -217,22 +225,25 @@
           it as Mother's Home, inspired by the well-known similar home in Mumbai known as 'Baap nu ghar' (Father's
           Home).
         </p>
-        <p class="text-blue-900 mb-4 text-sm">
+        <p class="text-blue-900 mb-4 text-sm sm:text-base">
           Mother's Home initially had about 50 girls, but 13 of them had to be excluded owing to the Department's strict
           regulations. Thus, Qudsia Banu Unity Women's Home was born. Today, this is a 2-storeyed building with 83
           under-privileged girls. All 120 girls in both homes are provided with full amenities and are enrolled in the
           Unity Group of Institutions.
         </p>
-        <p class="text-blue-900 mb-4 text-sm">
+        <p class="text-blue-900 mb-4 text-sm sm:text-base">
           After a long innings of 39 years as President of TES and its Unity Group of Institutions, I have stepped down,
           making way for Vice-President, Dr. Fazila Patankar, to take over as the new President. With over 17 years of
           experience in Public Health, I am confident that she, along with TES Management, will deal squarely with all
           the challenges and further elevate the status of our Institutions to make them the most sought-after in the
-          City of Karwar.<br><b>- Etibar Shah R Khan, President Emeritus</b>
+          City of Karwar.
+          <br>
+          <b>- Etibar Shah R Khan, President Emeritus</b>
         </p>
       </div>
     </div>
   </div>
+
 
   <!-- Popup 2 -->
   <div id="popup-card-2"
