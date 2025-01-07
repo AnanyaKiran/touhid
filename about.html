@@ -203,17 +203,22 @@
   <!-- Modal Search End -->
 
   <!-- Header Start -->
-  <div class="container-fluid bg-breadcrumb">
-    <div class="container text-center py-5" style="max-width: 900px;">
-      <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">About Us</h1>
-        <ol class="breadcrumb justify-content-center text-white mb-0 wow fadeInDown" data-wow-delay="0.3s">
-          <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
-          <!-- <li class="breadcrumb-item"><a href="#" class="text-white">Pages</a></li> -->
-          <li class="breadcrumb-item active text-secondary">About</li>
-        </ol>
+  <div class="container-fluid bg-breadcrumb"
+    style="position: relative; background: url('courses imgs/about imgs/Header -bg.jpg') center/cover no-repeat; height: 100vh; display: flex; align-items: center; justify-content: center;">
+    <!-- Overlay to enhance text visibility -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);">
+    </div>
+    <div class="container text-center py-5" style="max-width: 900px; z-index: 1;">
+      <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">About Us</h3>
+      <ol class="breadcrumb justify-content-center text-white mb-0 wow fadeInDown" data-wow-delay="0.3s">
+        <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+        <li class="breadcrumb-item active text-secondary">About</li>
+      </ol>
     </div>
   </div>
+
   <!-- Header End -->
+
 
   <!-- About Start -->
   <div class="container-fluid py-5">
@@ -221,13 +226,17 @@
       <div class="row g-5">
         <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
           <div class="bg-light rounded">
-            <img src="img/home/about-2.jpg" class="img-fluid w-100 border-bottom border-5 border-primary" style="
-                        border-top-right-radius: 300px;
-                        border-top-left-radius: 300px;
-                      " alt="Image" />
-            <img src="img/home/about-1.jpg" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image" />
+            <!-- First Image -->
+            <img src="courses imgs/about imgs/1st pic.jpg" class="img-fluid w-100 border-bottom border-5 border-primary"
+              style="border-top-right-radius: 300px; border-top-left-radius: 300px; height: 300px; object-fit: cover;"
+              alt="Image" />
+
+            <!-- Second Image -->
+            <img src="courses imgs/about imgs/2nd pic.jpg" class="img-fluid w-100"
+              style="height: 200px; object-fit: cover; margin-bottom: -7px;" alt="Image" />
           </div>
         </div>
+
         <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
           <h5 class="sub-title pe-3">About Us</h5>
           <h1 class="display-5 mb-4">
@@ -249,13 +258,13 @@
               <i class="fas fa-passport fa-3x text-secondary"></i>
               <h5 class="ms-4">71 Years of Excellence in Education</h5>
             </div>
-
           </div>
         </div>
       </div>
     </div>
   </div>
   <!-- About End -->
+
 
   <!-- Counter Facts Start -->
   <div class="container-fluid counter-facts py-5">

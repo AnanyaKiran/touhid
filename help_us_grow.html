@@ -250,16 +250,27 @@
   <!-- Modal Search End -->
 
   <!-- Header Start -->
-  <div class="container-fluid motherPageBG">
-    <div class="container text-center py-5" style="max-width: 900px;">
-      <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">Be a Part of the Change</h1>
-        <ol class="breadcrumb justify-content-center text-white mb-0 wow fadeInDown" data-wow-delay="0.3s">
-          <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
-          <li class="breadcrumb-item active text-secondary">Help Us Grow</li>
-        </ol>
+  <div class="container-fluid bg-breadcrumb"
+    style="position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+    <!-- Fullscreen Background Image -->
+    <div
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('img/HUG bg.jpg') center/cover no-repeat;">
+    </div>
+    <!-- Overlay to enhance text visibility -->
+    <div
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;">
+    </div>
+    <!-- Content Section -->
+    <div class="container text-center py-5" style="max-width: 900px; position: relative; z-index: 2;">
+      <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">Be a Part of the Change</h3>
+      <ol class="breadcrumb justify-content-center text-white mb-0 wow fadeInDown" data-wow-delay="0.3s">
+        <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+        <li class="breadcrumb-item active text-secondary">Help Us Grow</li>
+      </ol>
     </div>
   </div>
   <!-- Header End -->
+
 
   <!-- About Section -->
   <div class="container py-5   animate-fadeIn">
@@ -284,7 +295,6 @@
       <!-- Donation Cards -->
       <div class="col-md-6 col-lg-3 animate-fadeIn">
         <div class="card text-center shadow border-0 h-100 d-flex flex-column">
-          <img src="img/home/about-2.jpg" alt="Zakat" class="img-fluid mb-3 rounded-top">
           <div class="card-body flex-grow-1 d-flex flex-column">
             <h5 class="text-primary mb-3">ZAKAT</h5>
             <p class="text-muted flex-grow-1">
@@ -299,7 +309,6 @@
 
       <div class="col-md-6 col-lg-3 animate-fadeIn">
         <div class="card text-center shadow border-0 h-100 d-flex flex-column">
-          <img src="img/home/about-1.jpg" alt="Sadaqah" class="img-fluid mb-3 rounded-top">
           <div class="card-body flex-grow-1 d-flex flex-column">
             <h5 class="text-primary mb-3">SADAQAH</h5>
             <p class="text-muted flex-grow-1">
@@ -313,7 +322,6 @@
 
       <div class="col-md-6 col-lg-3 animate-fadeIn">
         <div class="card text-center shadow border-0 h-100 d-flex flex-column">
-          <img src="img/home/bg-2.jpg" alt="Sponsor a Girl" class="img-fluid mb-3 rounded-top">
           <div class="card-body flex-grow-1 d-flex flex-column">
             <h5 class="text-primary mb-3">Girl Sponsorship</h5>
             <p class="text-muted flex-grow-1">
@@ -327,7 +335,6 @@
 
       <div class="col-md-6 col-lg-3 animate-fadeIn">
         <div class="card text-center shadow border-0 h-100 d-flex flex-column">
-          <img src="img/home/bg-1.jpg" alt="General Donation" class="img-fluid mb-3 rounded-top">
           <div class="card-body flex-grow-1 d-flex flex-column">
             <h5 class="text-primary mb-3">General Donation</h5>
             <p class="text-muted flex-grow-1">
@@ -409,9 +416,9 @@
         $(".owl-carousel").owlCarousel({
           items: 2, // Number of items displayed at a time
           loop: true, // Infinite loop
-          margin: 10, // Space between items
+          margin: 5, // Reduced space between items
           autoplay: true, // Enable auto-play
-          autoplayTimeout: 5000, // Slide interval in milliseconds
+          autoplayTimeout: 2000, // Slide interval in milliseconds
           autoplayHoverPause: false, // Do not pause on hover
           dots: false, // Remove navigation dots
           nav: false, // Remove next and previous buttons
@@ -427,11 +434,12 @@
       });
     </script>
 
+
     <style>
       /* Image Styling */
       .carousel-image {
         width: 100%;
-        max-height: 400px;
+        max-height: 200px;
         object-fit: contain;
         display: block;
         margin: 0 auto;
