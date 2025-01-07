@@ -76,7 +76,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
       <!-- Logo -->
       <a href="/" class="navbar-brand p-0">
-        <img src="img\img\unity_logo.jpg" class="img-fluid">
+        <img src="img/img/unity_logo.jpg" class="img-fluid">
       </a>
       <!-- Navbar Toggler -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -135,7 +135,7 @@
             <a href="./Facilities.html" class="nav-link">Facilities</a>
           </li>
           <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" id="galleryDropdown" role="button" data-bs-toggle="dropdown"
+            <a href="#" class="nav-link active dropdown-toggle" id="galleryDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Gallery
             </a>
@@ -223,16 +223,15 @@
 
   <!-- Gallery Section -->
   <div class="container py-5 bg-gray-100">
-    <!-- Gallery Cards -->
     <div class="row g-4">
       <!-- Robotics -->
       <div class="col-lg-3 col-md-4 col-sm-6">
         <div class="card shadow-sm h-100">
           <div class="aspect-w-1 aspect-h-1">
-            <img src="img\robotics\robot-cover img.jpg" class="card-img-top object-contain w-full h-full"
+            <img src="img/robotics/robot-cover img.jpg" class="card-img-top object-contain w-full h-full"
               alt="Robotics Cover">
           </div>
-          <div class="card-body text-center">
+          <div class="card-body text-center d-flex flex-column justify-content-between">
             <h5 class="card-title">Robotics</h5>
             <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
               data-section="robotics">
@@ -248,7 +247,7 @@
             <img src="img/ruhs/IMG-20241231-WA0046.jpg" class="card-img-top object-contain w-full h-full"
               alt="RHS Exhibition Cover">
           </div>
-          <div class="card-body text-center">
+          <div class="card-body text-center d-flex flex-column justify-content-between">
             <h5 class="card-title">Chandrayaan - 3 Science Exhibition at RUHS</h5>
             <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
               data-section="rhsExhibition">
@@ -264,8 +263,8 @@
             <img src="img/ubds/IMG-20241231-WA0080.jpg" class="card-img-top object-contain w-full h-full"
               alt="Unity Bloomingdale Cover">
           </div>
-          <div class="card-body text-center">
-            <h5 class="card-title">Science Exhibition at UBDS</h5>
+          <div class="card-body text-center d-flex flex-column justify-content-between">
+            <h5 class="card-title">Science Exhibition-UBDS</h5>
             <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
               data-section="ubdcExhibition">
               View Gallery
@@ -273,30 +272,93 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-
-  <!-- Gallery Modal -->
-  <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="galleryModalLabel">Gallery</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <!-- Educational Week -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card shadow-sm h-100">
+          <div class="aspect-w-1 aspect-h-1">
+            <img src="img/educational week/ew-9.jpg" class="card-img-top object-contain w-full h-full"
+              alt="Educational Week 2024">
+          </div>
+          <div class="card-body text-center d-flex flex-column justify-content-between">
+            <h5 class="card-title">Educational Week 2024</h5>
+            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
+              data-section="educationalweek">
+              View Gallery
+            </button>
+          </div>
         </div>
-        <div class="modal-body">
-          <div class="row g-3" id="galleryContent">
-            <!-- Images will be dynamically injected here -->
+      </div>
+      <!-- Annual Sports Day -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card shadow-sm h-100">
+          <div class="aspect-w-1 aspect-h-1">
+            <img src="img/sports_day/pic-9.jpg" class="card-img-top object-contain w-full h-full"
+              alt="Educational Week 2024">
+          </div>
+          <div class="card-body text-center d-flex flex-column justify-content-between">
+            <h5 class="card-title">Annual Sports Day 2023</h5>
+            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
+              data-section="sportsday">
+              View Gallery
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- ARPUC & FHC Exhibition -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card shadow-sm h-100">
+          <div class="aspect-w-1 aspect-h-1">
+            <img src="img/arpuc & fhc exhibition/img1.jpg" class="card-img-top object-contain w-full h-full"
+              alt="Exhibition">
+          </div>
+          <div class="card-body text-center d-flex flex-column justify-content-between">
+            <h5 class="card-title">ARPUC & FHC Exhibition</h5>
+            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
+              data-section="exhibitionGallery">
+              View Gallery
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Unity Phool Bun -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card shadow-sm h-100">
+          <div class="aspect-w-1 aspect-h-1">
+            <img src="img/unity phool bun/upb-3.jpg" class="card-img-top object-contain w-full h-full"
+              alt="Unity Phool Bun">
+          </div>
+          <div class="card-body text-center d-flex flex-column justify-content-between">
+            <h5 class="card-title">Unity Phool Bun</h5>
+            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#galleryModal"
+              data-section="unityPhoolBunGallery">
+              View Gallery
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="galleryModalLabel">Gallery</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-3" id="galleryContent">
+              <!-- Images will be dynamically injected here -->
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
+
   <script>
     const galleryImages = {
-
       robotics: [
         "img/robotics/IMG-20241231-WA0054.jpg",
         "img/robotics/IMG-20241231-WA0055.jpg",
@@ -309,9 +371,8 @@
         "img/robotics/IMG-20241231-WA0063.jpg",
         "img/robotics/IMG-20241231-WA0064.jpg",
         "img/robotics/IMG-20241231-WA0065.jpg",
-        "img/robotics/IMG-20241231-WA0066.jpg",
+        "img/robotics/IMG-20241231-WA0066.jpg"
       ],
-
       rhsExhibition: [
         "img/ruhs/IMG-20241231-WA0032.jpg",
         "img/ruhs/IMG-20241231-WA0033.jpg",
@@ -328,16 +389,8 @@
         "img/ruhs/IMG-20241231-WA0044.jpg",
         "img/ruhs/IMG-20241231-WA0045.jpg",
         "img/ruhs/IMG-20241231-WA0046.jpg",
-        "img/ruhs/IMG-20241231-WA0047.jpg",
-        "img/ruhs/IMG-20241231-WA0048.jpg",
-        "img/ruhs/IMG-20241231-WA0049.jpg",
-        "img/ruhs/IMG-20241231-WA0050.jpg",
-        "img/ruhs/IMG-20241231-WA0051.jpg",
-        "img/ruhs/IMG-20241231-WA0052.jpg",
-        "img/ruhs/IMG-20241231-WA0053.jpg",
-        "img/ruhs/IMG-20241231-WA0054.jpg",],
-
-
+        "img/ruhs/IMG-20241231-WA0047.jpg"
+      ],
       ubdcExhibition: [
         "img/ubds/IMG-20241231-WA0056.jpg",
         "img/ubds/IMG-20241231-WA0055.jpg",
@@ -372,7 +425,123 @@
         "img/ubds/IMG-20241231-WA0085.jpg",
       ],
 
+      educationalweek: [
+        "img/educational week/ew-1.jpg",
+        "img/educational week/ew-2.jpg",
+        "img/educational week/ew-3.jpg",
+        "img/educational week/ew-4.jpg",
+        "img/educational week/ew-5.jpg",
+        "img/educational week/ew-6.jpg",
+        "img/educational week/ew-7.jpg",
+        "img/educational week/ew-8.jpg",
+        "img/educational week/ew-9.jpg",
+        "img/educational week/ew-10.jpg",
+        "img/educational week/ew-11.jpg",
+        "img/educational week/ew-12.jpg",
+        "img/educational week/ew-13.jpg",
+        "img/educational week/ew-14.jpg",
+        "img/educational week/ew-15.jpg",
+        "img/educational week/ew-16.jpg",
+        "img/educational week/ew-17.jpg",
+        "img/educational week/ew-18.jpg",
+        "img/educational week/ew-19.jpg",
+        "img/educational week/ew-20.jpg",
+        "img/educational week/ew-21.jpg",
+        "img/educational week/ew-22.jpg",
+        "img/educational week/ew-23.jpg",
+        "img/educational week/ew-24.jpg",
+        "img/educational week/ew-25.jpg",
+        "img/educational week/ew-26.jpg",
+        "img/educational week/ew-27.jpg"
+      ],
+      sportsday: [
+        "img/sports_day/pic-1.jpg",
+        "img/sports_day/pic-2.jpg",
+        "img/sports_day/pic-3.jpg",
+        "img/sports_day/pic-4.jpg",
+        "img/sports_day/pic-5.jpg",
+        "img/sports_day/pic-6.jpg",
+        "img/sports_day/pic-7.jpg",
+        "img/sports_day/pic-8.jpg",
+        "img/sports_day/pic-9.jpg",
+        "img/sports_day/pic-10.jpg",
+        "img/sports_day/pic-11.jpg",
+        "img/sports_day/pic-12.jpg",
+        "img/sports_day/pic-13.jpg",
+        "img/sports_day/pic-14.jpg",
+        "img/sports_day/pic-15.jpg",
+        "img/sports_day/pic-16.jpg",
+        "img/sports_day/pic-17.jpg",
+        "img/sports_day/pic-18.jpg",
+        "img/sports_day/pic-19.jpg",
+        "img/sports_day/pic-20.jpg",
+        "img/sports_day/pic-21.jpg",
+        "img/sports_day/pic-22.jpg",
+        "img/sports_day/pic-23.jpg",
+        "img/sports_day/pic-24.jpg",
+        "img/sports_day/pic-25.jpg",
+        "img/sports_day/pic-26.jpg",
+        "img/sports_day/pic-27.jpg",
+        "img/sports_day/pic-28.jpg",
+        "img/sports_day/pic-29.jpg",
+        "img/sports_day/pic-30.jpg",
+        "img/sports_day/pic-31.jpg",
+        "img/sports_day/pic-32.jpg"
+      ],
+      exhibitionGallery: [
+
+        "img/arpuc & fhc exhibition/img1.jpg",
+        "img/arpuc & fhc exhibition/img2.jpg",
+        "img/arpuc & fhc exhibition/img3.jpg",
+        "img/arpuc & fhc exhibition/img4.jpg",
+        "img/arpuc & fhc exhibition/img5.jpg",
+        "img/arpuc & fhc exhibition/img6.jpg",
+        "img/arpuc & fhc exhibition/img7.jpg",
+        "img/arpuc & fhc exhibition/img9.jpg",
+        "img/arpuc & fhc exhibition/img8.jpg",
+        "img/arpuc & fhc exhibition/img10.jpg",
+        "img/arpuc & fhc exhibition/img11.jpg",
+        "img/arpuc & fhc exhibition/img12.jpg",
+        "img/arpuc & fhc exhibition/img13.jpg",
+        "img/arpuc & fhc exhibition/img14.jpg",
+        "img/arpuc & fhc exhibition/img15.jpg",
+        "img/arpuc & fhc exhibition/img16.jpg",
+        "img/arpuc & fhc exhibition/img17.jpg",
+        "img/arpuc & fhc exhibition/img18.jpg",
+        "img/arpuc & fhc exhibition/img19.jpg",
+        "img/arpuc & fhc exhibition/img20.jpg",
+        "img/arpuc & fhc exhibition/img21.jpg",
+        "img/arpuc & fhc exhibition/img22.jpg",
+        "img/arpuc & fhc exhibition/img23.jpg",
+        "img/arpuc & fhc exhibition/img24.jpg",
+        "img/arpuc & fhc exhibition/img25.jpg",
+        "img/arpuc & fhc exhibition/img26.jpg",
+        "img/arpuc & fhc exhibition/img27.jpg",
+        "img/arpuc & fhc exhibition/img29.jpg",
+        "img/arpuc & fhc exhibition/img28.jpg",
+        "img/arpuc & fhc exhibition/img30.jpg",
+        "img/arpuc & fhc exhibition/img31.jpg",
+        "img/arpuc & fhc exhibition/img32.jpg",
+        "img/arpuc & fhc exhibition/img33.jpg"
+      ],
+      unityPhoolBunGallery: [
+        "img/unity phool bun/upb-1.jpg",
+        "img/unity phool bun/upb-2.jpg",
+        "img/unity phool bun/upb-3.jpg",
+        "img/unity phool bun/upb-4.jpg",
+        "img/unity phool bun/upb-5.jpg",
+        "img/unity phool bun/upb-6.jpg",
+        "img/unity phool bun/upb-7.jpg",
+        "img/unity phool bun/upb-8.jpg",
+        "img/unity phool bun/upb-9.jpg",
+        "img/unity phool bun/upb-10.jpg",
+        "img/unity phool bun/upb-11.jpg",
+        "img/unity phool bun/upb-12.jpg",
+        "img/unity phool bun/upb-13.jpg",
+        "img/unity phool bun/upb-14.jpg",
+      ]
     };
+
 
     const galleryModal = document.getElementById("galleryModal");
     const galleryContent = document.getElementById("galleryContent");
@@ -380,13 +549,11 @@
     galleryModal.addEventListener("show.bs.modal", function (event) {
       const button = event.relatedTarget;
       const section = button.getAttribute("data-section");
-      console.log(`Gallery section triggered: ${section}`);
 
       galleryContent.innerHTML = ""; // Clear previous content
 
       if (galleryImages[section]) {
         galleryImages[section].forEach((image) => {
-          console.log(`Adding image: ${image}`);
           const col = document.createElement("div");
           col.classList.add("col-lg-3", "col-md-4", "col-sm-6");
 
@@ -398,8 +565,6 @@
           col.appendChild(img);
           galleryContent.appendChild(col);
         });
-      } else {
-        console.error(`No images found for section: ${section}`);
       }
     });
   </script>
@@ -427,7 +592,7 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
   </style>
-
+  </div>
 
 
   <!-- Footer Start -->
@@ -498,7 +663,8 @@
       <div class="row g-4 align-items-center">
         <div class="col-md-6 text-center text-md-start mb-md-0">
           <span class="text-white"><a href="#" class="border-bottom text-white"><i
-                class="fas fa-copyright text-light me-2"></i>Touhid Education Society</a>, All right reserved.</span>
+                class="fas fa-copyright text-light me-2"></i>Touhid Education Society</a>, All right
+            reserved.</span>
         </div>
         <div class="col-md-6 text-center text-md-end text-white">
           <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
