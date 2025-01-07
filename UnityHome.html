@@ -517,155 +517,210 @@
             color: #6c757d;
         }
     </style>
-    <!-- Success Stories Button -->
-    <button class="success-button" onclick="togglePopup()">Our Success Stories</button>
+    
+<style>
 
-    <div id="success-popup">
-        <div class="header">
-            <h4>Our Success Stories</h4>
-            <button onclick="togglePopup()">×</button>
-        </div>
-        <div class="content">
-            <div class="owl-carousel owl-theme">
-                <div class="item">
-                    <h5>Qadar Bi Fakhruddin Madapur, Mundgod</h5>
-                    <p>
-                        Studied from 6th To BCom (Final)<br>
-                        Passed out in 2019<br>
-                        Working as Teacher at a School after completion of BED at Hangal District of Karnataka
-                    </p>
-                </div>
-                <div class="item">
-                    <h5>Mubina Basur, Ankola</h5>
-                    <p>
-                        Studied from 1st to BCom (Final)<br>
-                        Passed out in 2019 <br>
-                        Has completed BEd and working as a Part Time Teacher
-                    </p>
-                </div>
-                <div class="item">
-                    <h5>Jannat Jamaldar, Haliyal</h5>
-                    <p>Studied from 5th to PUC-2<br>
-                        Passed out in the year 2017<br>
-                        Did Nursing course and working as Nurse at KLE Hospital, Belgaum</p>
-                </div>
-                <div class="item">
-                    <h5>Shaziya Shaikh, Ankola</h5>
-                    <p>Studied from 1st to 10th Standard<br>
-                        Passed out in the year 2009<br>
-                        Working with Infosys, Bangalore
-                    </p>
-                </div>
-                <div class="item">
-                    <h5>Ruqaiya , Yellapur</h5>
-                    <p>Studied from 6th to 10th<br>
-                        Passed out in the year 2009<br>
-                        Did Nursing Course and working as a Nurse at Civil Hospital, Yellapur</p>
-                </div>
-            </div>
-        </div>
+
+/* Drawer with success stories */
+.drawer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+
+}
+
+/* Header inside the drawer */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    z-index: 99999;
+    position: relative;
+}
+
+.header h2 {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.toggle-btn {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Card container that will scroll */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    animation: scrollUp 20s linear infinite;
+    padding: 10px;
+    gap: 10px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Infinite scroll animation */
+@keyframes scrollUp {
+    0% {
+        transform: translateY(10%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+/* Arrow styles */
+.arrow-down, .arrow-up {
+    display: inline-block;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    padding: 5px;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.arrow-up {
+    transform: rotate(-135deg);
+}
+
+/* Transition for button */
+.toggle-btn.active .arrow-down {
+    transform: rotate(135deg);
+}
+
+</style>
+
+
+<div class="drawer" id="drawer">
+    <!-- Header and button inside the drawer -->
+    <div class="header">
+        <h2>Success Stories</h2>
+        <button class="toggle-btn" id="toggleBtn">
+            <span id="arrow" class="arrow-down"></span>
+        </button>
     </div>
-    <style>
-        /* Style the popup to be hidden by default and only slide up when triggered */
-        #success-popup {
-            position: fixed;
-            bottom: 0;
-            right: 0;
-            width: 100%;
-            max-width: 400px;
-            height: 0;
-            background: white;
-            box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            transition: height 0.3s ease-in-out;
-            z-index: 1000;
-            border-top: 3px solid #1c054e;
-        }
 
-        #success-popup.open {
-            height: 250px;
-            /* Adjust height when open */
-        }
+    <!-- Cards for success stories -->
+    <div class="card-container">
+        <div class="card"> 
+            <h3>Qadar Bi Fakhruddin Madapur</h3>
+            <p>Studied 6th to BCom (Final), passed out in 2019. Now working as a teacher after completing BEd in Hangal, Karnataka.</p>
+        </div>
+        <div class="card">
+            <h3>Mubina Basur Ankola</h3>
+            <p>Studied 1st to BCom (Final), passed out in 2019. Now a part-time teacher after completing BEd.</p>
+        </div>
+        <div class="card">
+            <h3>Jannat Jamaldar, Haliyal</h3>
+            <p>Studied 5th to PUC-2, passed out in 2017. Completed nursing and is now a nurse at KLE Hospital, Belgaum.</p>
+        </div>
+        <div class="card">
+            <h3>Shaziya Shaikh, Ankola</h3>
+            <p>Studied 1st to 10th standard, passed out in 2009. Currently working with Infosys, Bangalore.</p>
+        </div>
+        <div class="card">
+            <h3>Ruqaiya, Yellapur</h3>
+            <p>Studied 6th to 10th, passed out in 2009. Completed nursing and is now a nurse at Civil Hospital, Yellapur.</p>
+        </div>
 
-        #success-popup .header {
-            background: #1c054e;
-            color: white;
-            padding: 10px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        <div class="card"> 
+            <h3>Qadar Bi Fakhruddin Madapur</h3>
+            <p>Studied 6th to BCom (Final), passed out in 2019. Now working as a teacher after completing BEd in Hangal, Karnataka.</p>
+        </div>
+        <div class="card">
+            <h3>Mubina Basur Ankola</h3>
+            <p>Studied 1st to BCom (Final), passed out in 2019. Now a part-time teacher after completing BEd.</p>
+        </div>
+        <div class="card">
+            <h3>Jannat Jamaldar, Haliyal</h3>
+            <p>Studied 5th to PUC-2, passed out in 2017. Completed nursing and is now a nurse at KLE Hospital, Belgaum.</p>
+        </div>
+        <div class="card">
+            <h3>Shaziya Shaikh, Ankola</h3>
+            <p>Studied 1st to 10th standard, passed out in 2009. Currently working with Infosys, Bangalore.</p>
+        </div>
+        <div class="card">
+            <h3>Ruqaiya, Yellapur</h3>
+            <p>Studied 6th to 10th, passed out in 2009. Completed nursing and is now a nurse at Civil Hospital, Yellapur.</p>
+        </div>
+        <div class="card"> 
+            <h3>Qadar Bi Fakhruddin Madapur</h3>
+            <p>Studied 6th to BCom (Final), passed out in 2019. Now working as a teacher after completing BEd in Hangal, Karnataka.</p>
+        </div>
+        <div class="card">
+            <h3>Mubina Basur Ankola</h3>
+            <p>Studied 1st to BCom (Final), passed out in 2019. Now a part-time teacher after completing BEd.</p>
+        </div>
+        <div class="card">
+            <h3>Jannat Jamaldar, Haliyal</h3>
+            <p>Studied 5th to PUC-2, passed out in 2017. Completed nursing and is now a nurse at KLE Hospital, Belgaum.</p>
+        </div>
+        <div class="card">
+            <h3>Shaziya Shaikh, Ankola</h3>
+            <p>Studied 1st to 10th standard, passed out in 2009. Currently working with Infosys, Bangalore.</p>
+        </div>
+        <div class="card">
+            <h3>Ruqaiya, Yellapur</h3>
+            <p>Studied 6th to 10th, passed out in 2009. Completed nursing and is now a nurse at Civil Hospital, Yellapur.</p>
+        </div>
+        
 
-        #success-popup .header h4 {
-            margin: 0;
-            color: white;
-        }
+        <div class="card"> 
+            <h3>Qadar Bi Fakhruddin Madapur</h3>
+            <p>Studied 6th to BCom (Final), passed out in 2019. Now working as a teacher after completing BEd in Hangal, Karnataka.</p>
+        </div>
+        <div class="card">
+            <h3>Mubina Basur Ankola</h3>
+            <p>Studied 1st to BCom (Final), passed out in 2019. Now a part-time teacher after completing BEd.</p>
+        </div>
+        <div class="card">
+            <h3>Jannat Jamaldar, Haliyal</h3>
+            <p>Studied 5th to PUC-2, passed out in 2017. Completed nursing and is now a nurse at KLE Hospital, Belgaum.</p>
+        </div>
+        <div class="card">
+            <h3>Shaziya Shaikh, Ankola</h3>
+            <p>Studied 1st to 10th standard, passed out in 2009. Currently working with Infosys, Bangalore.</p>
+        </div>
+        <div class="card">
+            <h3>Ruqaiya, Yellapur</h3>
+            <p>Studied 6th to 10th, passed out in 2009. Completed nursing and is now a nurse at Civil Hospital, Yellapur.</p>
+        </div>
 
-        #success-popup .header button {
-            background: transparent;
-            border: none;
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        .owl-carousel .item {
-            text-align: center;
-            padding: 15px;
-            background: #f8f9fa;
-            margin: 10px;
-            border-radius: 8px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .owl-carousel .item h5 {
-            margin: 10px 0 5px;
-            font-size: 16px;
-            color: black;
-        }
-
-        .owl-carousel .item p {
-            margin: 0;
-            font-size: 14px;
-            color: #6c757d;
-        }
-    </style>
-    <script>
-    // Initialize the Owl Carousel only after the popup is open
-    function initializeCarousel() {
-    // Ensure Owl Carousel is only initialized when the popup is visible
-    $(".owl-carousel").owlCarousel({
-    loop: true,
-    margin: 10,
-    autoplay: true,
-    autoplayTimeout: 5000, // Content auto-plays every 5 seconds
-    autoplayHoverPause: true, // Pause autoplay on hover
-    items: 1, // Show one item at a time
-    responsiveClass: true
-    });
-    }
-
-    // Open the success stories drawer when the button is clicked
-    $(".success-button").click(function() {
-    const popup = $('#success-popup');
-    popup.addClass('open');
-
-    // Initialize Owl Carousel once the popup is open
-    initializeCarousel();
-    });
-
-    // Close the popup when clicked outside
-    function togglePopup() {
-    const popup = document.getElementById("success-popup");
-    popup.classList.toggle("open");
-
-    // If closing, destroy the carousel to avoid interference
-    if (!popup.classList.contains('open')) {
-    $(".owl-carousel").trigger('destroy.owl.carousel');
-    $(".owl-carousel").removeClass('owl-loaded');
-    }
-    }
-</script>
+    </div>
+</div>
 
 
     <!-- Footer Start -->
@@ -767,4 +822,21 @@
     <script src="js/main.js"></script>
 </body>
 
+
+<script>
+document.getElementById('toggleBtn').addEventListener('click', function() {
+    const drawer = document.getElementById('drawer');
+    const arrow = document.getElementById('arrow');
+    drawer.classList.toggle('active');
+    arrow.classList.toggle('arrow-up');
+    // Toggle the drawer's position for sliding effect
+    if (drawer.classList.contains('active')) {
+        drawer.style.transform = 'translateY(90%)'; // Slide down
+    } else {
+        drawer.style.transform = 'translateY(0)'; // Slide up
+    }
+});
+
+
+</script>
 </html>
