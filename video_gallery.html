@@ -210,16 +210,34 @@
   </div>
   <!-- Header End -->
   <!-- Video Gallery Section -->
+  <!-- Video Gallery Section -->
   <div class="container py-5 bg-gray-100">
     <h2 class="text-center mb-5">Video Gallery</h2>
     <div class="row g-4">
-      <!-- Video Item -->
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="card shadow-sm h-100">
-          <img src="img\video thumbnail.jpg" class="card-img-top" alt="Fusion Fest Thumbnail" style="cursor: pointer;"
-            data-bs-toggle="modal" data-bs-target="#videoModal1">
+      <!-- First Video Thumbnail -->
+      <div class="col-lg-6 col-md-6">
+        <div class="card shadow-sm h-100 border-0">
+          <div class="card-img-top-wrapper" style="aspect-ratio: 16/9; overflow: hidden;">
+            <img src="img\video thumbnail.jpg" class="card-img-top img-fluid object-cover" alt="Fusion Fest Thumbnail"
+              style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#videoModal"
+              data-video-title="Fusion Fest - Rahimkhan Unity High School" data-video-src="videos/RHS fest.mp4">
+          </div>
           <div class="card-body text-center">
             <h5 class="card-title">Fusion Fest - Rahimkhan Unity High School</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Video Thumbnail -->
+      <div class="col-lg-6 col-md-6">
+        <div class="card shadow-sm h-100 border-0">
+          <div class="card-img-top-wrapper" style="aspect-ratio: 16/9; overflow: hidden;">
+            <img src="img/ruhs/thumbnail2.png" class="card-img-top img-fluid object-cover" alt="Mangalyaan Thumbnail"
+              style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#videoModal"
+              data-video-title="Mangalyaan - Rahimkhan Unity High School" data-video-src="videos/RUHS.mp4">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Mangalyaan - Rahimkhan Unity High School</h5>
           </div>
         </div>
       </div>
@@ -227,23 +245,74 @@
   </div>
 
   <!-- Video Modal -->
-  <div class="modal fade" id="videoModal1" tabindex="-1" aria-labelledby="videoModal1Label" aria-hidden="true">
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="videoModal1Label">Fusion Fest - Rahimkhan Unity High School</h5>
+          <h5 class="modal-title" id="videoModalLabel"></h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <!-- Video element for embedding the video -->
-          <video controls class="w-100">
-            <source src="videos/RHS fest.mp4" type="video/mp4">
-            <p>Your browser does not support HTML5 video.</p>
+          <!-- Dynamic Video -->
+          <video controls class="w-100" id="modalVideo">
+            <source src="" type="video/mp4">
+            Your browser does not support HTML5 video.
           </video>
         </div>
       </div>
     </div>
   </div>
+
+  <style>
+    /* Custom Styles for Cards */
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-img-top {
+      object-fit: cover;
+    }
+
+    .card-img-top-wrapper {
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    h2 {
+      color: #343a40;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1200px;
+    }
+  </style>
+
+  <script>
+    // JavaScript to dynamically update modal content
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('videoModal');
+      const modalTitle = modal.querySelector('.modal-title');
+      const modalVideo = modal.querySelector('#modalVideo source');
+
+      // Attach click event listener to video thumbnails
+      document.querySelectorAll('[data-bs-target="#videoModal"]').forEach(item => {
+        item.addEventListener('click', () => {
+          const videoTitle = item.getAttribute('data-video-title');
+          const videoSrc = item.getAttribute('data-video-src');
+
+          // Update modal content
+          modalTitle.textContent = videoTitle;
+          modalVideo.src = videoSrc;
+          modal.querySelector('video').load(); // Reload video
+        });
+      });
+    });
+  </script>
 
 
 
